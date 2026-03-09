@@ -42,7 +42,7 @@ function DataStream({ x, delay }) {
       {chars.map((c, i) => (
         <span
           key={i}
-          className="text-[10px] font-mono text-white leading-tight block"
+          className="text-[10px] font-mono text-gray-400 dark:text-white leading-tight block"
           style={{ opacity: 1 - i * 0.07 }}
         >
           {c}

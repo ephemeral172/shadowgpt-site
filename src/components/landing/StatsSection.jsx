@@ -50,11 +50,11 @@ export default function StatsSection() {
           transition={{ duration: 0.8 }}
           className="text-center mb-20"
         >
-          <span className="text-xs tracking-[0.3em] uppercase text-white/30 font-light">{tx.label}</span>
-          <h2 className="text-3xl md:text-5xl font-extralight mt-4 tracking-tight">
+          <span className="text-xs tracking-[0.3em] uppercase text-gray-400 dark:text-white/30 font-light">{tx.label}</span>
+          <h2 className="text-3xl md:text-5xl font-extralight mt-4 tracking-tight text-gray-900 dark:text-white">
             {tx.title1} <span className="font-semibold">{tx.title2}</span>
           </h2>
-          <p className="text-white/30 mt-4 max-w-lg mx-auto font-light">{tx.desc}</p>
+          <p className="text-gray-500 dark:text-white/30 mt-4 max-w-lg mx-auto font-light">{tx.desc}</p>
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -67,13 +67,13 @@ export default function StatsSection() {
               transition={{ duration: 0.8, delay: i * 0.15 }}
               className="glass-card rounded-2xl p-8 cursor-default"
             >
-              <div className="text-4xl md:text-5xl font-extralight text-white/90 mb-4 tracking-tight">
+              <div className="text-4xl md:text-5xl font-extralight text-gray-900 dark:text-white/90 mb-4 tracking-tight">
                 <AnimatedCounter target={stat.value} suffix={stat.suffix} prefix={stat.prefix} />
               </div>
-              <p className="text-sm text-white/40 font-light leading-relaxed mb-3">{stat.label}</p>
+              <p className="text-sm text-gray-500 dark:text-white/40 font-light leading-relaxed mb-3">{stat.label}</p>
               <div className="flex items-center gap-2">
-                <div className="w-1 h-1 rounded-full bg-white/20" />
-                <span className="text-[10px] text-white/20 font-light">{stat.source}</span>
+                <div className="w-1 h-1 rounded-full bg-gray-400 dark:bg-white/20" />
+                <span className="text-[10px] text-gray-400 dark:text-white/20 font-light">{stat.source}</span>
               </div>
             </motion.div>
           ))}
@@ -86,7 +86,7 @@ export default function StatsSection() {
           transition={{ duration: 0.8, delay: 0.3 }}
           className="mt-16 glass-card rounded-2xl p-8 md:p-12"
         >
-          <h3 className="text-lg font-light text-white/60 mb-6">{tx.uploadsTitle}</h3>
+          <h3 className="text-lg font-light text-gray-600 dark:text-white/60 mb-6">{tx.uploadsTitle}</h3>
           <div className="flex flex-wrap gap-3">
             {tx.uploads.map((item, i) => (
               <motion.span
@@ -95,7 +95,7 @@ export default function StatsSection() {
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: 0.05 * i }}
-                className="glass rounded-full px-4 py-2 text-xs text-white/50 font-light hover:text-white/70 hover:bg-white/5 transition-all duration-300 cursor-default"
+                className="glass rounded-full px-4 py-2 text-xs text-gray-500 dark:text-white/50 font-light hover:text-gray-700 dark:hover:text-white/70 hover:bg-gray-100 dark:hover:bg-white/5 transition-all duration-300 cursor-default"
               >
                 {item}
               </motion.span>

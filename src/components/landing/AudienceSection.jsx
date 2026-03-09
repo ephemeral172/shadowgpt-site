@@ -19,8 +19,8 @@ export default function AudienceSection() {
           transition={{ duration: 0.8 }}
           className="text-center mb-20"
         >
-          <span className="text-xs tracking-[0.3em] uppercase text-white/30 font-light">{tx.label}</span>
-          <h2 className="text-3xl md:text-5xl font-extralight mt-4 tracking-tight">
+          <span className="text-xs tracking-[0.3em] uppercase text-gray-400 dark:text-white/30 font-light">{tx.label}</span>
+          <h2 className="text-3xl md:text-5xl font-extralight mt-4 tracking-tight text-gray-900 dark:text-white">
             {tx.title1} <span className="font-semibold">{tx.title2}</span>
           </h2>
         </motion.div>
@@ -40,19 +40,19 @@ export default function AudienceSection() {
               >
                 <div className="flex items-start gap-5">
                   <div className="glass-highlight rounded-xl w-12 h-12 flex items-center justify-center flex-shrink-0">
-                    <Icon className="w-5 h-5 text-white/60" strokeWidth={1.5} />
+                    <Icon className="w-5 h-5 text-gray-600 dark:text-white/60" strokeWidth={1.5} />
                   </div>
                   <div>
-                    <h3 className="text-lg font-light text-white/80 mb-1">{seg.title}</h3>
-                    <p className="text-xs text-white/20 font-light mb-3">{seg.range}</p>
+                    <h3 className="text-lg font-light text-gray-800 dark:text-white/80 mb-1">{seg.title}</h3>
+                    <p className="text-xs text-gray-400 dark:text-white/20 font-light mb-3">{seg.range}</p>
                     <div className="space-y-2">
                       <div className="flex items-center gap-2">
-                        <div className="w-1 h-1 rounded-full bg-white/20" />
-                        <span className="text-sm text-white/35 font-light">{seg.buyerLabel}: {seg.buyer}</span>
+                        <div className="w-1 h-1 rounded-full bg-gray-400 dark:bg-white/20" />
+                        <span className="text-sm text-gray-500 dark:text-white/35 font-light">{seg.buyerLabel}: {seg.buyer}</span>
                       </div>
                       <div className="flex items-center gap-2">
-                        <div className="w-1 h-1 rounded-full bg-white/30" />
-                        <span className="text-sm text-white/45 font-light">{seg.pain}</span>
+                        <div className="w-1 h-1 rounded-full bg-gray-500 dark:bg-white/30" />
+                        <span className="text-sm text-gray-600 dark:text-white/45 font-light">{seg.pain}</span>
                       </div>
                     </div>
                   </div>
