@@ -159,7 +159,7 @@ export const t = {
           features: [
             "Мониторинг 19+ AI-сервисов и кастомные источники",
             "Облачный дашборд в реальном времени, SSE-лента событий",
-            "4-слойная классификация рисков (regex, правила, Presidio NER, LLM)",
+            "4-слойная классификация рисков",
             "Heartbeat и статус сотрудников каждые 5 минут",
             "Правила Flag / Warn / Block, pre-classify до отправки",
             "Файловый мониторинг (PDF, DOCX, код, OCR)",
@@ -366,7 +366,7 @@ export const t = {
           features: [
             "Monitor 19+ AI services and custom sources",
             "Real-time cloud dashboard, SSE event feed",
-            "4-layer risk classification (regex, rules, Presidio NER, LLM)",
+            "4-layer risk classification",
             "Heartbeat and employee status every 5 minutes",
             "Flag / Warn / Block rules, pre-classify before send",
             "File monitoring (PDF, DOCX, code, OCR)",
