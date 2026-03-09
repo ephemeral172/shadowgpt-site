@@ -216,7 +216,7 @@
   margin-left: -13px;
   margin-top: -13px;
   border-radius: 50%;
-  animation: hero-orbit-sm 26s linear infinite;
+  animation: hero-orbit-sm 34s linear infinite;
   z-index: 12;
 }
 @media (min-width: 768px) {
@@ -255,7 +255,7 @@
   pointer-events: none;
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
-  animation: hero-orbit-sm 26s linear infinite;
+  animation: hero-orbit-sm 34s linear infinite;
   z-index: 11;
   mask-image: radial-gradient(circle, black 10%, rgba(0,0,0,0.6) 30%, rgba(0,0,0,0.2) 50%, transparent 65%);
   -webkit-mask-image: radial-gradient(circle, black 10%, rgba(0,0,0,0.6) 30%, rgba(0,0,0,0.2) 50%, transparent 65%);
