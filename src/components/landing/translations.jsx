@@ -129,10 +129,10 @@ export const t = {
       title1: "Кому нужен",
       title2: "ShadowGPT",
       segments: [
-        { title: "IT-компании", range: "10–200 человек", buyer: "CTO / IT-директор", pain: "Утечки кода, архитектуры, API-ключей", buyerLabel: "Покупатель" },
-        { title: "Финансы и юридические", range: "10–500 человек", buyer: "Руководитель / безопасник", pain: "Утечки клиентских данных и договоров", buyerLabel: "Покупатель" },
-        { title: "Маркетинг и агентства", range: "10–100 человек", buyer: "Директор", pain: "Утечки стратегий клиентов", buyerLabel: "Покупатель" },
-        { title: "Любой B2B с ПДн", range: "10–500 человек", buyer: "CEO / DPO", pain: "Штрафы по 152-ФЗ", buyerLabel: "Покупатель" },
+        { title: "IT-компании", range: "10–200 человек", buyer: "CTO / IT-директор", pain: "Утечки кода, архитектуры, API-ключей", buyerLabel: "Ответственный" },
+        { title: "Финансы и юридические", range: "10–500 человек", buyer: "Руководитель / безопасник", pain: "Утечки клиентских данных и договоров", buyerLabel: "Ответственный" },
+        { title: "Маркетинг и агентства", range: "10–100 человек", buyer: "Директор", pain: "Утечки стратегий клиентов", buyerLabel: "Ответственный" },
+        { title: "Любой B2B с ПДн", range: "10–500 человек", buyer: "CEO / DPO", pain: "Штрафы по 152-ФЗ", buyerLabel: "Ответственный" },
       ],
     },
     pricing: {
@@ -330,10 +330,10 @@ export const t = {
       title1: "Who needs",
       title2: "ShadowGPT",
       segments: [
-        { title: "IT Companies", range: "10–200 employees", buyer: "CTO / IT Director", pain: "Code, architecture, API key leaks", buyerLabel: "Buyer" },
-        { title: "Finance & Legal", range: "10–500 employees", buyer: "Manager / Security Officer", pain: "Client data & contract leaks", buyerLabel: "Buyer" },
-        { title: "Marketing & Agencies", range: "10–100 employees", buyer: "Director", pain: "Client strategy leaks", buyerLabel: "Buyer" },
-        { title: "Any B2B with PII", range: "10–500 employees", buyer: "CEO / DPO", pain: "GDPR / regulatory fines", buyerLabel: "Buyer" },
+        { title: "IT Companies", range: "10–200 employees", buyer: "CTO / IT Director", pain: "Code, architecture, API key leaks", buyerLabel: "Decision maker" },
+        { title: "Finance & Legal", range: "10–500 employees", buyer: "Manager / Security Officer", pain: "Client data & contract leaks", buyerLabel: "Decision maker" },
+        { title: "Marketing & Agencies", range: "10–100 employees", buyer: "Director", pain: "Client strategy leaks", buyerLabel: "Decision maker" },
+        { title: "Any B2B with PII", range: "10–500 employees", buyer: "CEO / DPO", pain: "GDPR / regulatory fines", buyerLabel: "Decision maker" },
       ],
     },
     pricing: {
