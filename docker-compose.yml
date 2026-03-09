@@ -1,0 +1,22 @@
+version: '3'
+
+services:
+  shadow-site:
+    image: ghcr.io/ephemeral172/shadowgpt-site:latest
+
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.shadowgpt.rule=Host(`shadowgpt.app`) || Host(`www.shadowgpt.app`)"
+      - "traefik.http.routers.shadowgpt.entrypoints=websecure"
+      - "traefik.http.routers.shadowgpt.tls=true"
+      - "traefik.http.services.shadowgpt.loadbalancer.server.port=80"
+      - "traefik.http.routers.shadowgpt.tls.certresolver=leresolver"
+
+    networks:
+      - traefik_net
+
+    restart: unless-stopped
+
+networks:
+  traefik_net:
+    external: true
