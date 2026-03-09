@@ -15,7 +15,7 @@ const competitors = [
   { name: "Prompt Security", price: "Enterprise, по запросу", setup: "Дни", priceEn: "Enterprise, on request", setupEn: "Days" },
 ];
 
-const shadowgpt = { name: "ShadowGPT", price: "от 4 990 ₽/мес", priceEn: "from ₽4 990/mo", setup: "10 минут", setupEn: "10 minutes" };
+const shadowgpt = { name: "ShadowGPT", price: "от 4 990 ₽/мес", priceEn: "from $55/mo", setup: "10 минут", setupEn: "10 minutes" };
 
 export default function ComparisonSection() {
   const { lang } = useLang();

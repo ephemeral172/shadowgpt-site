@@ -125,7 +125,11 @@ export default function HeroSection() {
           <a href="https://console.shadowgpt.app/login" target="_blank" rel="noopener noreferrer" className="glass-highlight hover:bg-gray-200/80 dark:hover:bg-white/10 transition-all duration-500 rounded-full px-8 py-3.5 text-sm tracking-wide text-gray-900 dark:text-white/90 font-light">
             {tx.cta1}
           </a>
-          <button className="glass hover:bg-gray-100 dark:hover:bg-white/5 transition-all duration-500 rounded-full px-8 py-3.5 text-sm tracking-wide text-gray-600 dark:text-white/50 font-light">
+          <button
+            type="button"
+            onClick={() => document.getElementById("learn-more")?.scrollIntoView({ behavior: "smooth" })}
+            className="glass hover:bg-gray-100 dark:hover:bg-white/5 transition-all duration-500 rounded-full px-8 py-3.5 text-sm tracking-wide text-gray-600 dark:text-white/50 font-light"
+          >
             {tx.cta2}
           </button>
         </motion.div>

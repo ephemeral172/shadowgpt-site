@@ -50,6 +50,10 @@
 import Home from './pages/Home';
 import Terms from './pages/Terms';
 import Privacy from './pages/Privacy';
+import FAQ from './pages/FAQ';
+import Help from './pages/Help';
+import Security from './pages/Security';
+import Integrations from './pages/Integrations';
 import __Layout from './Layout.jsx';
 
 
@@ -57,6 +61,10 @@ export const PAGES = {
     "Home": Home,
     "Terms": Terms,
     "Privacy": Privacy,
+    "FAQ": FAQ,
+    "Help": Help,
+    "Security": Security,
+    "Integrations": Integrations,
 }
 
 export const pagesConfig = {

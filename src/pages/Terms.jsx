@@ -33,7 +33,7 @@ const content = {
       },
       {
         title: "7. Контакты",
-        body: "По вопросам условий использования: через форму обратной связи на сайте или указанные контактные данные.",
+        body: "Оператор сервиса — Axioma8. По вопросам условий использования: через форму обратной связи на сайте или указанные контактные данные.",
       },
     ],
     back: "На главную",
@@ -70,7 +70,7 @@ const content = {
       },
       {
         title: "7. Contact",
-        body: "For questions about these terms: via the website contact form or the contact details provided.",
+        body: "Service operator: Axioma8. For questions about these terms: via the website contact form or the contact details provided.",
       },
     ],
     back: "Back to home",

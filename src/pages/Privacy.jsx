@@ -29,7 +29,7 @@ const content = {
       },
       {
         title: "6. Ваши права",
-        body: "В соответствии с применимым законодательством (в т.ч. GDPR, 152-ФЗ) вы можете запросить доступ к вашим данным, исправление, удаление или ограничение обработки. Запросы можно направлять через контакты на сайте.",
+        body: "Оператор персональных данных: Axioma8. В соответствии с применимым законодательством (в т.ч. GDPR, 152-ФЗ) вы можете запросить доступ к вашим данным, исправление, удаление или ограничение обработки. Запросы можно направлять через контакты на сайте.",
       },
       {
         title: "7. Безопасность",
@@ -66,7 +66,7 @@ const content = {
       },
       {
         title: "6. Your rights",
-        body: "Under applicable law (including GDPR and local data protection laws) you may request access, correction, deletion, or restriction of processing. Requests can be sent via the website contact details.",
+        body: "Data controller: Axioma8. Under applicable law (including GDPR and local data protection laws) you may request access, correction, deletion, or restriction of processing. Requests can be sent via the website contact details.",
       },
       {
         title: "7. Security",

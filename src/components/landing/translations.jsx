@@ -6,6 +6,12 @@ export const t = {
     footer: {
       terms: "Условия",
       privacy: "Конфиденциальность",
+      faq: "FAQ",
+      help: "Помощь",
+      security: "Безопасность",
+      integrations: "Интеграции",
+      login: "Вход",
+      poweredBy: "Powered by Axioma8 © 2026",
     },
     hero: {
       badge: "Защита от Shadow AI",
@@ -207,6 +213,12 @@ export const t = {
     footer: {
       terms: "Terms",
       privacy: "Privacy",
+      faq: "FAQ",
+      help: "Help",
+      security: "Security",
+      integrations: "Integrations",
+      login: "Log in",
+      poweredBy: "Powered by Axioma8 © 2026",
     },
     hero: {
       badge: "Shadow AI Protection",
@@ -342,7 +354,7 @@ export const t = {
       title2: "pricing",
       desc: "10–100× cheaper than enterprise DLP solutions. Setup in 10 minutes instead of months of deployment. We do not store your data content — only metadata and risk classification.",
       popular: "Popular",
-      perMonth: "₽/mo",
+      perMonth: "$/mo",
       trial: "14-day free trial on any plan",
       noData: "We do not store data content — only metadata and risk level",
       cta: "Start pilot",
@@ -350,7 +362,7 @@ export const t = {
         {
           name: "Starter",
           limit: "up to 10 users",
-          price: "4 990",
+          price: "55",
           features: [
             "Monitor 19+ AI services and custom sources",
             "Real-time cloud dashboard, SSE event feed",
@@ -365,7 +377,7 @@ export const t = {
         {
           name: "Business",
           limit: "up to 30 users",
-          price: "19 990",
+          price: "220",
           popular: true,
           features: [
             "Everything in Starter, full-time",
@@ -380,7 +392,7 @@ export const t = {
         {
           name: "Enterprise",
           limit: "up to 200 users",
-          price: "89 900",
+          price: "990",
           features: [
             "Everything in Business",
             "AI Policy Generator: 9 jurisdictions (152-FZ, GDPR, etc.), 11 industries",

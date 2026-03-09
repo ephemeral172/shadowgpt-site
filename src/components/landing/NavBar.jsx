@@ -7,7 +7,7 @@ import { t } from "./translations";
 
 export default function NavBar() {
   const [scrolled, setScrolled] = useState(false);
-  const { lang, setLang } = useLang();
+  const { lang } = useLang();
   const { theme, toggleTheme } = useTheme();
 
   useEffect(() => {
@@ -40,30 +40,6 @@ export default function NavBar() {
           >
             {theme === "dark" ? <Sun className="w-4 h-4" /> : <Moon className="w-4 h-4" />}
           </button>
-
-          {/* Language switcher */}
-          <div className="glass rounded-full p-1 flex items-center gap-1">
-            <button
-              onClick={() => setLang("ru")}
-              className={`px-3 py-1 rounded-full text-xs font-light tracking-wide transition-all duration-300 ${
-                lang === "ru"
-                  ? "glass-highlight text-gray-900 dark:text-white/90"
-                  : "text-gray-400 dark:text-white/30 hover:text-gray-600 dark:hover:text-white/50"
-              }`}
-            >
-              RU
-            </button>
-            <button
-              onClick={() => setLang("en")}
-              className={`px-3 py-1 rounded-full text-xs font-light tracking-wide transition-all duration-300 ${
-                lang === "en"
-                  ? "glass-highlight text-gray-900 dark:text-white/90"
-                  : "text-gray-400 dark:text-white/30 hover:text-gray-600 dark:hover:text-white/50"
-              }`}
-            >
-              EN
-            </button>
-          </div>
 
           <a href="https://console.shadowgpt.app/login" target="_blank" rel="noopener noreferrer" className="glass hover:bg-gray-100 dark:hover:bg-white/5 transition-all duration-300 rounded-full px-5 py-2 text-xs tracking-wide text-gray-600 dark:text-white/50 font-light">
             {t[lang].nav.cta}
