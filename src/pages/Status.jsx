@@ -4,6 +4,8 @@ import { Shield, Activity, Database, Bell, Cpu } from "lucide-react";
 import { AreaChart, Area, XAxis, YAxis, Tooltip, ResponsiveContainer } from "recharts";
 import { APP_VERSION } from "../lib/version";
 
+const STATUS_API_URL = "https://console.shadowgpt.app/api/status";
+
 const content = {
   ru: {
     title: "Состояние системы",
@@ -15,8 +17,11 @@ const content = {
     aiService: "AI-сервис",
     operational: "Работает",
     enabled: "Включён",
+    disabled: "Выключен",
     uptimeChart: "Доступность за 30 дней",
     beta: "beta",
+    error: "Не удалось загрузить статус",
+    loading: "Загрузка…",
   },
   en: {
     title: "System status",
@@ -28,8 +33,11 @@ const content = {
     aiService: "AI service",
     operational: "Operational",
     enabled: "Enabled",
+    disabled: "Disabled",
     uptimeChart: "Uptime last 30 days",
     beta: "beta",
+    error: "Failed to load status",
+    loading: "Loading…",
   },
 };
 
@@ -54,15 +62,26 @@ function getUptimeData() {
   return data;
 }
 
-// Simple uptime duration display (static for demo: 11h 24m)
-const UPTIME_DISPLAY = "11ч 24м";
-const UPTIME_DISPLAY_EN = "11h 24m";
+function formatUptime(seconds, lang) {
+  if (seconds == null || seconds < 0) return "—";
+  const h = Math.floor(seconds / 3600);
+  const m = Math.floor((seconds % 3600) / 60);
+  const s = Math.floor(seconds % 60);
+  const parts = [];
+  if (h > 0) parts.push(lang === "ru" ? `${h}ч` : `${h}h`);
+  if (m > 0) parts.push(lang === "ru" ? `${m}м` : `${m}m`);
+  if (s > 0 || parts.length === 0) parts.push(lang === "ru" ? `${s}с` : `${s}s`);
+  return parts.join(" ");
+}
 
 export default function Status() {
   const lang = getLang();
   const t = content[lang];
   const [mounted, setMounted] = useState(false);
   const [dark, setDark] = useState(false);
+  const [status, setStatus] = useState(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
   const uptimeData = getUptimeData();
 
   useEffect(() => {
@@ -72,6 +91,27 @@ export default function Status() {
     const handler = () => setDark(m.matches);
     m.addEventListener("change", handler);
     return () => m.removeEventListener("change", handler);
+  }, []);
+
+  useEffect(() => {
+    let cancelled = false;
+    setLoading(true);
+    setError(null);
+    fetch(STATUS_API_URL)
+      .then((res) => {
+        if (!res.ok) throw new Error(res.statusText);
+        return res.json();
+      })
+      .then((data) => {
+        if (!cancelled) setStatus(data);
+      })
+      .catch((err) => {
+        if (!cancelled) setError(err.message || t.error);
+      })
+      .finally(() => {
+        if (!cancelled) setLoading(false);
+      });
+    return () => { cancelled = true; };
   }, []);
 
   if (!mounted) {
@@ -85,6 +125,25 @@ export default function Status() {
   const isDark = dark;
   const cardClass = "rounded-2xl p-6 border border-gray-200/80 dark:border-white/10 bg-white/60 dark:bg-white/5 backdrop-blur-xl";
   const dotClass = "w-2.5 h-2.5 rounded-full bg-emerald-500 shadow-[0_0_10px_rgba(16,185,129,0.6)]";
+
+  const version = status?.version ?? APP_VERSION;
+  const uptimeDisplay = status != null ? formatUptime(status.uptime_seconds, lang) : (loading ? t.loading : "—");
+  const databaseOk = status != null && status.database === "ok";
+  const alertsOn = status != null && status.alerts_enabled === true;
+  const aiOn = status != null && status.ai_enabled === true;
+
+  if (error && !status) {
+    return (
+      <div className="min-h-screen bg-gray-50/80 dark:bg-[#050505] text-gray-900 dark:text-white px-4 py-10 flex items-center justify-center">
+        <div className="max-w-md text-center">
+          <p className="text-gray-500 dark:text-white/50 font-light mb-4">{t.error}</p>
+          <Link to="/" className="text-sm underline text-gray-600 dark:text-white/60 hover:text-gray-800 dark:hover:text-white/80">
+            {t.back}
+          </Link>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="min-h-screen bg-gray-50/80 dark:bg-[#050505] text-gray-900 dark:text-white px-4 py-10 md:px-6 md:py-12">
@@ -114,7 +173,7 @@ export default function Status() {
               {t.version}
             </div>
             <p className="text-lg font-light text-gray-900 dark:text-white">
-              v{APP_VERSION}
+              v{version}
             </p>
           </div>
 
@@ -124,7 +183,7 @@ export default function Status() {
               {t.uptime}
             </div>
             <p className="text-lg font-light text-gray-900 dark:text-white font-mono">
-              {lang === "ru" ? UPTIME_DISPLAY : UPTIME_DISPLAY_EN}
+              {uptimeDisplay}
             </p>
           </div>
 
@@ -136,10 +195,10 @@ export default function Status() {
                   {t.database}
                 </div>
                 <p className="text-lg font-light text-gray-900 dark:text-white">
-                  {t.operational}
+                  {status == null ? "—" : databaseOk ? t.operational : (status.database ?? "—")}
                 </p>
               </div>
-              <div className={dotClass} />
+              {databaseOk && <div className={dotClass} />}
             </div>
           </div>
 
@@ -151,10 +210,10 @@ export default function Status() {
                   {t.alerts}
                 </div>
                 <p className="text-lg font-light text-gray-900 dark:text-white">
-                  {t.enabled}
+                  {status == null ? "—" : alertsOn ? t.enabled : t.disabled}
                 </p>
               </div>
-              <div className={dotClass} />
+              {alertsOn && <div className={dotClass} />}
             </div>
           </div>
 
@@ -166,10 +225,10 @@ export default function Status() {
                   {t.aiService}
                 </div>
                 <p className="text-lg font-light text-gray-900 dark:text-white">
-                  {t.enabled}
+                  {status == null ? "—" : aiOn ? t.enabled : t.disabled}
                 </p>
               </div>
-              <div className={dotClass} />
+              {aiOn && <div className={dotClass} />}
             </div>
           </div>
         </div>
