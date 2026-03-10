@@ -209,8 +209,8 @@ export default function Status() {
                     fontSize: "12px",
                   }}
                   labelStyle={{ color: isDark ? "rgba(255,255,255,0.6)" : "rgba(0,0,0,0.5)" }}
-                  formatter={([value]) => [`${Number(value).toFixed(2)}%`, "Uptime"]}
-                  labelFormatter={(_, payload) => payload[0]?.payload?.full || ""}
+                  formatter={(value) => [`${Number(value).toFixed(2)}%`, "Uptime"]}
+                  labelFormatter={(_, payload) => (Array.isArray(payload) && payload[0]?.payload?.full) || ""}
                 />
                 <Area
                   type="monotone"
