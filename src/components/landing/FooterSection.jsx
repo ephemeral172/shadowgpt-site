@@ -25,6 +25,7 @@ export default function FooterSection() {
             <Link to="/Security" className="text-xs text-gray-400 dark:text-white/15 font-light hover:text-gray-500 dark:hover:text-white/30">{footer.security}</Link>
             <Link to="/Integrations" className="text-xs text-gray-400 dark:text-white/15 font-light hover:text-gray-500 dark:hover:text-white/30">{footer.integrations}</Link>
             <Link to="/Contact" className="text-xs text-gray-400 dark:text-white/15 font-light hover:text-gray-500 dark:hover:text-white/30">{footer.contact}</Link>
+            <Link to="/Status" className="text-xs text-gray-400 dark:text-white/15 font-light hover:text-gray-500 dark:hover:text-white/30">{footer.status}</Link>
             <Link to="/Terms" className="text-xs text-gray-400 dark:text-white/15 font-light hover:text-gray-500 dark:hover:text-white/30">{footer.terms}</Link>
             <Link to="/Privacy" className="text-xs text-gray-400 dark:text-white/15 font-light hover:text-gray-500 dark:hover:text-white/30">{footer.privacy}</Link>
             <span className="text-xs text-gray-400 dark:text-white/15 font-light">{footer.poweredBy}</span>
