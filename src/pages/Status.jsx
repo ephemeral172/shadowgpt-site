@@ -4,7 +4,8 @@ import { Shield, Activity, Database, Bell, Cpu } from "lucide-react";
 import { AreaChart, Area, XAxis, YAxis, Tooltip, ResponsiveContainer } from "recharts";
 import { APP_VERSION } from "../lib/version";
 
-const STATUS_API_URL = "https://console.shadowgpt.app/api/status";
+/** Same-origin to avoid CORS; proxied in dev (Vite) and prod (Netlify/Vercel). */
+const STATUS_API_URL = "/api/status";
 
 const content = {
   ru: {
