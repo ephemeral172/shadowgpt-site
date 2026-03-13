@@ -111,10 +111,21 @@ export default function HeroSection() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.1 }}
-          className="text-sm md:text-base text-gray-400 dark:text-white/25 font-light max-w-xl mx-auto leading-relaxed mb-12"
+          className="text-sm md:text-base text-gray-400 dark:text-white/25 font-light max-w-xl mx-auto leading-relaxed mb-2"
         >
           {tx.desc}
         </motion.p>
+        {tx.localAi && (
+          <motion.p
+            key={lang + "localAi"}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="text-xs md:text-sm text-gray-500 dark:text-white/30 font-light max-w-xl mx-auto leading-relaxed mb-12"
+          >
+            {tx.localAi}
+          </motion.p>
+        )}
 
         <motion.div
           initial={{ opacity: 0, y: 20 }}

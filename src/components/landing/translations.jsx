@@ -20,6 +20,7 @@ export const t = {
       badge: "Защита от Shadow AI",
       subtitle: "Защита компании от утечек данных через нейросети.",
       desc: "Расширение для браузера + облачный дашборд. Установка за 10 минут. Не требует серверов, агентов или внедрения.",
+      localAi: "В расширении установлена локальная ИИ-модель для анализа — данные не попадают на сервер, всё конфиденциально.",
       cta1: "Бесплатный 7-дневный аудит",
       cta2: "Узнать больше ↓",
     },
@@ -114,6 +115,11 @@ export const t = {
           title: "Режим конфиденциальности",
           description: "Анонимизация чувствительных данных перед отправкой в AI. Настраиваемые типы PII: email, телефон, ИНН, паспорт, API-ключи и др.",
           tags: ["Privacy Mode", "Маскировка", "152-ФЗ"],
+        },
+        {
+          title: "Локальная ИИ-модель в расширении",
+          description: "Анализ данных выполняется локальной ИИ-моделью прямо в расширении. Содержимое промптов и файлов не отправляется на сервер — только метаданные и уровень риска. Всё конфиденциально.",
+          tags: ["Локально", "Конфиденциально", "Без облака"],
         },
         {
           title: "Генератор AI-политики",
@@ -230,6 +236,7 @@ export const t = {
       badge: "Shadow AI Protection",
       subtitle: "Protect your company from data leaks through AI services.",
       desc: "Browser extension + cloud dashboard. Setup in 10 minutes. No servers, agents, or complex deployment required.",
+      localAi: "The extension uses a local AI model for analysis — your data never leaves your device, everything stays confidential.",
       cta1: "Free 7-Day Audit",
       cta2: "Learn more ↓",
     },
@@ -324,6 +331,11 @@ export const t = {
           title: "Privacy Mode",
           description: "Anonymize sensitive data before sending to AI. Configurable PII types: email, phone, TIN, passport, API keys, etc.",
           tags: ["Anonymize", "Masking", "GDPR"],
+        },
+        {
+          title: "Local AI model in the extension",
+          description: "Data is analyzed by a local AI model inside the extension. Prompt and file content is never sent to the server — only metadata and risk level. Everything stays confidential.",
+          tags: ["Local", "Confidential", "No cloud"],
         },
         {
           title: "AI Policy Generator",

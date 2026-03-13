@@ -1,9 +1,9 @@
 import { motion } from "framer-motion";
-import { Eye, Brain, ShieldCheck, Activity, FileText, FileSearch, Lock, Send } from "lucide-react";
+import { Eye, Brain, ShieldCheck, Activity, FileText, FileSearch, Lock, Cpu, Send } from "lucide-react";
 import { useLang } from "./LangContext";
 import { t } from "./translations";
 
-const icons = [Eye, Brain, ShieldCheck, Activity, FileSearch, Lock, FileText, Send];
+const icons = [Eye, Brain, ShieldCheck, Activity, FileSearch, Lock, FileText, Cpu, Send];
 
 export default function FeaturesSection() {
   const { lang } = useLang();
