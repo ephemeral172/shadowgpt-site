@@ -41,6 +41,9 @@ export default function NavBar() {
             {theme === "dark" ? <Sun className="w-4 h-4" /> : <Moon className="w-4 h-4" />}
           </button>
 
+          <a href="https://console.shadowgpt.app/login" target="_blank" rel="noopener noreferrer" className="text-xs tracking-wide text-gray-500 dark:text-white/40 hover:text-gray-700 dark:hover:text-white/60 font-light transition-colors">
+            {t[lang].nav.login}
+          </a>
           <a href="https://console.shadowgpt.app/login" target="_blank" rel="noopener noreferrer" className="glass hover:bg-gray-100 dark:hover:bg-white/5 transition-all duration-300 rounded-full px-5 py-2 text-xs tracking-wide text-gray-600 dark:text-white/50 font-light">
             {t[lang].nav.cta}
           </a>

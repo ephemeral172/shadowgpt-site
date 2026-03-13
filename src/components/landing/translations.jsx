@@ -2,6 +2,7 @@ export const t = {
   ru: {
     nav: {
       cta: "Начать аудит",
+      login: "Войти",
     },
     footer: {
       terms: "Условия",
@@ -211,6 +212,7 @@ export const t = {
   en: {
     nav: {
       cta: "Start Audit",
+      login: "Log in",
     },
     footer: {
       terms: "Terms",
