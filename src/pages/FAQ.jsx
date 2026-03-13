@@ -11,7 +11,7 @@ const content = {
     items: [
       {
         q: "Как устроено ценообразование?",
-        a: "Три тарифа: Starter (до 10 пользователей), Business (до 30), Enterprise (до 200). Оплата помесячно или годом. Бесплатный триал 14 дней на любом тарифе — без карты, с полным доступом к функциям выбранного плана.",
+        a: "Три тарифа: Starter (до 10 пользователей), Business (до 30), Enterprise (до 200). Оплата помесячно или годом. Бесплатный триал 7 дней на любом тарифе — без карты, с полным доступом к функциям выбранного плана.",
       },
       {
         q: "Сколько времени занимает внедрение?",
@@ -44,7 +44,7 @@ const content = {
     items: [
       {
         q: "How does pricing work?",
-        a: "Three plans: Starter (up to 10 users), Business (up to 30), Enterprise (up to 200). Billing is monthly or annual. A 14-day free trial is available on any plan — no card required, with full access to the plan’s features.",
+        a: "Three plans: Starter (up to 10 users), Business (up to 30), Enterprise (up to 200). Billing is monthly or annual. A 7-day free trial is available on any plan — no card required, with full access to the plan’s features.",
       },
       {
         q: "How long does deployment take?",

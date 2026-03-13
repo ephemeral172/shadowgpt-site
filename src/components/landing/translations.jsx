@@ -19,7 +19,7 @@ export const t = {
       badge: "Защита от Shadow AI",
       subtitle: "Защита компании от утечек данных через нейросети.",
       desc: "Расширение для браузера + облачный дашборд. Установка за 10 минут. Не требует серверов, агентов или внедрения.",
-      cta1: "Бесплатный 14-дневный аудит",
+      cta1: "Бесплатный 7-дневный аудит",
       cta2: "Узнать больше ↓",
     },
     stats: {
@@ -150,7 +150,7 @@ export const t = {
       desc: "В 10–100 раз дешевле enterprise DLP-решений. Установка за 10 минут вместо месяцев внедрения. Мы не храним содержимое ваших данных — только метаданные и классификацию рисков.",
       popular: "Популярный",
       perMonth: "₽/мес",
-      trial: "Бесплатный триал 14 дней на любом тарифе",
+      trial: "Бесплатный триал 7 дней на любом тарифе",
       noData: "Мы не храним содержимое данных — только метаданные и уровень риска",
       cta: "Начать пилот",
       plans: [
@@ -165,7 +165,7 @@ export const t = {
             "Heartbeat и статус сотрудников каждые 5 минут",
             "Правила Flag / Warn / Block, pre-classify до отправки",
             "Файловый мониторинг (PDF, DOCX, код, OCR)",
-            "В триале 14 дней: алерты (Telegram/Webhook/Email) и PDF Audit Report",
+            "В триале 7 дней: алерты (Telegram/Webhook/Email) и PDF Audit Report",
             "После триала: только мониторинг и дашборд без уведомлений",
           ],
         },
@@ -203,7 +203,7 @@ export const t = {
     cta: {
       title1: "Узнайте, что ваши сотрудники",
       title2: "отправляют в нейросети",
-      desc: "Бесплатный 14-дневный аудит. Установка за 10 минут. Никаких обязательств.",
+      desc: "Бесплатный 7-дневный аудит. Установка за 10 минут. Никаких обязательств.",
       btn: "Начать бесплатный аудит",
     },
   },
@@ -228,7 +228,7 @@ export const t = {
       badge: "Shadow AI Protection",
       subtitle: "Protect your company from data leaks through AI services.",
       desc: "Browser extension + cloud dashboard. Setup in 10 minutes. No servers, agents, or complex deployment required.",
-      cta1: "Free 14-Day Audit",
+      cta1: "Free 7-Day Audit",
       cta2: "Learn more ↓",
     },
     stats: {
@@ -359,7 +359,7 @@ export const t = {
       desc: "10–100× cheaper than enterprise DLP solutions. Setup in 10 minutes instead of months of deployment. We do not store your data content — only metadata and risk classification.",
       popular: "Popular",
       perMonth: "$/mo",
-      trial: "14-day free trial on any plan",
+      trial: "7-day free trial on any plan",
       noData: "We do not store data content — only metadata and risk level",
       cta: "Start pilot",
       plans: [
@@ -374,7 +374,7 @@ export const t = {
             "Heartbeat and employee status every 5 minutes",
             "Flag / Warn / Block rules, pre-classify before send",
             "File monitoring (PDF, DOCX, code, OCR)",
-            "In 14-day trial: alerts (Telegram/Webhook/Email) and PDF Audit Report",
+            "In 7-day trial: alerts (Telegram/Webhook/Email) and PDF Audit Report",
             "After trial: monitoring and dashboard only, no notifications",
           ],
         },
@@ -412,7 +412,7 @@ export const t = {
     cta: {
       title1: "Discover what your employees",
       title2: "are sending to AI services",
-      desc: "Free 14-day audit. Setup in 10 minutes. No commitment.",
+      desc: "Free 7-day audit. Setup in 10 minutes. No commitment.",
       btn: "Start free audit",
     },
   },
