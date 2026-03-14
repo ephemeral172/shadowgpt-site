@@ -21,6 +21,7 @@ const content = {
     enabled: "Включён",
     disabled: "Выключен",
     uptimeChart: "Доступность за 30 дней",
+    tooltipUptime: "Доступность",
     beta: "beta",
     error: "Не удалось загрузить статус",
     loading: "Загрузка…",
@@ -37,6 +38,7 @@ const content = {
     enabled: "Enabled",
     disabled: "Disabled",
     uptimeChart: "Uptime last 30 days",
+    tooltipUptime: "Uptime",
     beta: "beta",
     error: "Failed to load status",
     loading: "Loading…",
@@ -53,6 +55,7 @@ const content = {
     enabled: "활성화",
     disabled: "비활성화",
     uptimeChart: "최근 30일 가동률",
+    tooltipUptime: "가동률",
     beta: "beta",
     error: "상태를 불러오지 못했습니다",
     loading: "로딩 중…",
@@ -69,21 +72,24 @@ const content = {
     enabled: "Activado",
     disabled: "Desactivado",
     uptimeChart: "Disponibilidad últimos 30 días",
+    tooltipUptime: "Disponibilidad",
     beta: "beta",
     error: "No se pudo cargar el estado",
     loading: "Cargando…",
   },
 };
 
+const LOCALE_MAP = { ru: "ru-RU", en: "en-US", ko: "ko-KR", es: "es" };
+
 // Fake uptime: 99.9% for chart (30 points)
-function getUptimeData() {
+function getUptimeData(locale) {
   const data = [];
   const now = new Date();
   for (let i = 29; i >= 0; i--) {
     const d = new Date(now);
     d.setDate(d.getDate() - i);
     data.push({
-      date: d.toLocaleDateString(undefined, { month: "short", day: "numeric" }),
+      date: d.toLocaleDateString(locale || "en-US", { month: "short", day: "numeric" }),
       uptime: 99.9 + Math.random() * 0.1,
       full: d.toISOString().slice(0, 10),
     });
@@ -97,9 +103,10 @@ function formatUptime(seconds, lang) {
   const m = Math.floor((seconds % 3600) / 60);
   const s = Math.floor(seconds % 60);
   const parts = [];
-  if (h > 0) parts.push(lang === "ru" ? `${h}ч` : `${h}h`);
-  if (m > 0) parts.push(lang === "ru" ? `${m}м` : `${m}m`);
-  if (s > 0 || parts.length === 0) parts.push(lang === "ru" ? `${s}с` : `${s}s`);
+  const l = lang || "en";
+  if (h > 0) parts.push(l === "ru" ? `${h}ч` : l === "ko" ? `${h}시` : l === "es" ? `${h}h` : `${h}h`);
+  if (m > 0) parts.push(l === "ru" ? `${m}м` : l === "ko" ? `${m}분` : l === "es" ? `${m}min` : `${m}m`);
+  if (s > 0 || parts.length === 0) parts.push(l === "ru" ? `${s}с` : l === "ko" ? `${s}초` : l === "es" ? `${s}s` : `${s}s`);
   return parts.join(" ");
 }
 
@@ -111,7 +118,8 @@ export default function Status() {
   const [status, setStatus] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-  const uptimeData = getUptimeData();
+  const locale = LOCALE_MAP[lang] || "en-US";
+  const uptimeData = getUptimeData(locale);
 
   useEffect(() => {
     setMounted(true);
@@ -297,7 +305,7 @@ export default function Status() {
                     fontSize: "12px",
                   }}
                   labelStyle={{ color: isDark ? "rgba(255,255,255,0.6)" : "rgba(0,0,0,0.5)" }}
-                  formatter={(value) => [`${Number(value).toFixed(2)}%`, "Uptime"]}
+                  formatter={(value) => [`${Number(value).toFixed(2)}%`, t.tooltipUptime]}
                   labelFormatter={(_, payload) => (Array.isArray(payload) && payload[0]?.payload?.full) || ""}
                 />
                 <Area
