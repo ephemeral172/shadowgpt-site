@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { Shield } from "lucide-react";
+import { useLang } from "../components/landing/LangContext";
 
 const content = {
   ru: {
@@ -76,16 +77,43 @@ const content = {
     back: "Back to home",
     terms: "Terms of Use",
   },
+  ko: {
+    title: "개인정보처리방침",
+    updated: "최종 업데이트: 2026",
+    intro: "당사는 귀하의 데이터 내용을 저장하지 않습니다. 아래에서 어떤 데이터를 처리하고 그 이유를 설명합니다.",
+    sections: [
+      { title: "1. 최소 데이터 원칙", body: "ShadowGPT는 프롬프트 텍스트, 첨부 파일 내용(PDF, DOCX, 코드, 이미지) 또는 기타 기밀 사용자 데이터를 저장하지 않습니다. 클라우드에서는 대시보드, 보고서 및 알림에 필요한 이벤트 메타데이터(출처, 시간, 위험 수준, 사용자/기기 식별자)와 위험 분류 결과만 처리 및 저장합니다." },
+      { title: "2. 처리하는 데이터", body: "확장 프로그램 및 대시보드 사용 시 계정 데이터(이메일, 조직명), 모니터링 이벤트 메타데이터(서비스, 시간, 위험 수준, 분류별 콘텐츠 유형), 기술 데이터(IP, User-Agent, 확장 프로그램과 조직 연결 식별자)를 처리할 수 있습니다. 텍스트 및 파일의 특징 추출은 확장 프로그램에서 로컬로 수행되며, 프롬프트 및 파일 내용은 서버로 전송되지 않습니다." },
+      { title: "3. 처리 목적", body: "서비스 제공(대시보드, 알림, 보고서), 결제, 분류 및 제품 품질 개선, 법적 준수." },
+      { title: "4. 법적 근거 및 보관", body: "처리는 계약(서비스 이용), 필요한 경우 동의, 정당한 이익에 기반합니다. 이벤트 메타데이터는 서비스 및 보고에 필요한 기간 동안, 계정 데이터는 계정 삭제 또는 동의 철회 시까지 보관하며 법적 요건을 따릅니다." },
+      { title: "5. 데이터 공유", body: "데이터는 서비스 제공에 필요한 범위와 의무로만 클라우드 및 서비스 제공자(호스팅, 익명화된 분석)와 공유될 수 있습니다. 개인정보를 판매하지 않습니다." },
+      { title: "6. 귀하의 권리", body: "데이터 관리자: Axioma8. 적용 법률(GDPR 및 현지 개인정보보호법 포함)에 따라 접근, 정정, 삭제 또는 처리 제한을 요청할 수 있습니다. 웹사이트 연락처로 요청하세요." },
+      { title: "7. 보안", body: "당사는 무단 접근, 변경 및 파괴로부터 처리 데이터를 보호하기 위한 조직적·기술적 조치를 적용합니다." },
+    ],
+    back: "홈으로",
+    terms: "이용약관",
+  },
+  es: {
+    title: "Política de privacidad",
+    updated: "Última actualización: 2026",
+    intro: "No almacenamos el contenido de sus datos. A continuación describimos qué datos procesamos y por qué.",
+    sections: [
+      { title: "1. Principio de datos mínimos", body: "ShadowGPT no almacena texto de prompts, contenido de adjuntos (PDF, DOCX, código, imágenes) ni otros datos confidenciales de usuarios. Solo se procesan y almacenan en la nube metadatos de eventos (origen, hora, nivel de riesgo, identificador de usuario/dispositivo) y resultados de clasificación de riesgo, según lo necesario para el panel, informes y notificaciones." },
+      { title: "2. Datos que procesamos", body: "Al usar la extensión y el panel podemos procesar: datos de cuenta (email, nombre de organización); metadatos de eventos (servicio, hora, nivel de riesgo, tipo de contenido); datos técnicos (IP, User-Agent, identificadores). La extracción de características se hace localmente en la extensión; el contenido de prompts y archivos no se envía al servidor." },
+      { title: "3. Fines", body: "Prestación del servicio (panel, alertas, informes), facturación, mejora de la clasificación y del producto, cumplimiento legal." },
+      { title: "4. Base legal y conservación", body: "El tratamiento se basa en contrato, consentimiento cuando proceda e interés legítimo. Los metadatos se conservan lo necesario para el servicio; los datos de cuenta hasta eliminación o revocación del consentimiento, con sujeción a la ley." },
+      { title: "5. Cesión de datos", body: "Los datos pueden compartirse con proveedores de nube y servicios solo en la medida necesaria. No vendemos datos personales." },
+      { title: "6. Sus derechos", body: "Responsable: Axioma8. Según la ley aplicable (incl. GDPR) puede solicitar acceso, rectificación, supresión o limitación. Solicitudes mediante los contactos del sitio." },
+      { title: "7. Seguridad", body: "Aplicamos medidas técnicas y organizativas para proteger los datos frente a acceso, alteración y destrucción no autorizados." },
+    ],
+    back: "Volver al inicio",
+    terms: "Términos de uso",
+  },
 };
 
-function getLang() {
-  if (typeof navigator === "undefined") return "en";
-  return (navigator.language || "").toLowerCase().startsWith("ru") ? "ru" : "en";
-}
-
 export default function Privacy() {
-  const lang = getLang();
-  const t = content[lang];
+  const { lang } = useLang();
+  const t = content[lang] || content.en;
 
   return (
     <div className="min-h-screen bg-white text-gray-900 dark:bg-[#050505] dark:text-white px-6 py-16">

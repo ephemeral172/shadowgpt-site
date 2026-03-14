@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { Shield } from "lucide-react";
+import { useLang } from "../components/landing/LangContext";
 
 const content = {
   ru: {
@@ -62,16 +63,41 @@ const content = {
       },
     ],
   },
+  ko: {
+    title: "도움말",
+    updated: "최종 업데이트: 2026",
+    back: "홈으로",
+    integrations: "연동",
+    terms: "이용약관",
+    privacy: "개인정보처리방침",
+    sections: [
+      { title: "확장 프로그램 설치", body: "ShadowGPT는 브라우저 확장 프로그램으로 동작합니다. Chrome, Microsoft Edge, Yandex Browser 지원. 설치 1–2분. 대시보드 로그인 후 조직을 만들고 '확장 프로그램' 섹션에서 설치 링크를 사용하거나 브라우저 스토어에서 ShadowGPT를 검색해 설치하세요. 설치 후 확장 프로그램을 열고 대시보드의 연결 코드를 입력하면 기기가 조직에 연결됩니다. 한 컴퓨터당 한 번 설치면 되며, 브라우저나 프로필을 바꾸면 다시 설치하고 코드를 입력해야 합니다." },
+      { title: "연결 코드와 여러 사용자", body: "연결 코드(조직 키)는 대시보드의 확장 프로그램 설정에 표시됩니다. 각 직원이 확장 프로그램을 설치하고 같은 코드를 입력하면 모든 기기가 조직에 연결됩니다. 필요 시 대시보드에서 코드를 변경할 수 있으며, 변경 후에는 각 기기에서 새 코드를 다시 입력해야 합니다." },
+      { title: "대시보드 개요", body: "클라우드 대시보드에서 모니터링 이벤트를 실시간으로 볼 수 있습니다: 사용한 AI 서비스, 시간, 위험 수준(HIGH/MEDIUM/LOW), 콘텐츠 유형. 날짜, 사용자, 서비스, 위험 수준별 필터 가능. 분석 섹션에는 요약, 히트맵, 지원 플랜의 경우 PDF 감사 보고서 및 직원 위험 점수가 있습니다. 규칙(Flag/Warn/Block) 및 알림 설정은 대시보드 해당 섹션에서 합니다." },
+      { title: "알림 및 연동", body: "Business 이상 플랜에서 고위험 이벤트 알림을 설정할 수 있습니다: Telegram(봇 또는 채팅), Webhook(시스템 URL), Email. 대시보드의 연동 섹션에서 채널 유형을 선택하고 토큰 또는 URL을 추가해 저장하세요. 연동 전체 목록(Telegram, Webhook, Email, CSV 내보내기 등)은 '연동' 페이지에 있습니다." },
+      { title: "확장 프로그램이 서비스를 인식하지 않을 때", body: "AI 서비스 페이지가 확장 프로그램이 설치된 탭에서 열려 있고 로그인되어 있는지 확인하세요. 사이트에 나열된 AI 서비스와 대시보드에 추가한 사용자 정의 소스만 지원됩니다. 사용자 정의 소스를 추가했다면 URL과 설정이 올바른지 확인하고, 문제가 계속되면 웹사이트를 통해 지원팀에 문의하세요." },
+    ],
+  },
+  es: {
+    title: "Ayuda",
+    updated: "Última actualización: 2026",
+    back: "Volver al inicio",
+    integrations: "Integraciones",
+    terms: "Términos",
+    privacy: "Privacidad",
+    sections: [
+      { title: "Instalación de la extensión", body: "ShadowGPT funciona como extensión del navegador. Navegadores soportados: Chrome, Microsoft Edge y Yandex Browser. La instalación lleva 1–2 minutos. Tras iniciar sesión en el panel, cree una organización (si no existe), vaya a la sección «Extensión» y use el enlace de instalación o busque la extensión en la tienda por ShadowGPT. Instálela, ábrala e introduzca el código de vinculación del panel para asociar el dispositivo a su organización. Una instalación por equipo basta; si cambia de navegador o perfil, instale de nuevo e introduzca el código otra vez." },
+      { title: "Código de vinculación y varios usuarios", body: "El código de vinculación («clave de organización») aparece en el panel en la configuración de la extensión. Cada empleado instala la extensión e introduce el mismo código para que todos los dispositivos queden en su organización. Puede cambiar el código en el panel si hace falta; tras el cambio, los enlaces antiguos dejan de funcionar y cada dispositivo debe introducir el nuevo código." },
+      { title: "Vista general del panel", body: "El panel en la nube muestra los eventos de monitoreo en tiempo real: servicio de IA usado, hora, nivel de riesgo (HIGH/MEDIUM/LOW) y tipo de contenido. Puede filtrar por fecha, usuario, servicio y nivel de riesgo. En análisis hay resúmenes, heatmap y en planes compatibles el informe PDF y la puntuación de riesgo por empleado. Las reglas (Flag/Warn/Block) y las notificaciones se configuran en las secciones correspondientes del panel." },
+      { title: "Notificaciones e integraciones", body: "En planes Business y superiores puede configurar notificaciones para eventos de alto riesgo: Telegram (bot o chat), Webhook (URL de su sistema) o Email. Configúrelas en el panel en integraciones: elija el tipo de canal, añada token o URL y guarde. La lista completa está en la página Integraciones." },
+      { title: "Si la extensión no detecta un servicio", body: "Compruebe que la página del servicio de IA esté abierta en una pestaña donde está instalada la extensión y que haya iniciado sesión. Solo se soportan los servicios de IA listados en el sitio y las fuentes personalizadas añadidas en el panel. Si añadió una fuente personalizada, verifique que la URL y la configuración sean correctas. Si el problema continúa, contacte con soporte a través del sitio." },
+    ],
+  },
 };
 
-function getLang() {
-  if (typeof navigator === "undefined") return "en";
-  return (navigator.language || "").toLowerCase().startsWith("ru") ? "ru" : "en";
-}
-
 export default function Help() {
-  const lang = getLang();
-  const t = content[lang];
+  const { lang } = useLang();
+  const t = content[lang] || content.en;
 
   return (
     <div className="min-h-screen bg-white text-gray-900 dark:bg-[#050505] dark:text-white px-6 py-16">

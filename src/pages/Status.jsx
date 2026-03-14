@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { Shield, Activity, Database, Bell, Cpu } from "lucide-react";
 import { AreaChart, Area, XAxis, YAxis, Tooltip, ResponsiveContainer } from "recharts";
 import { APP_VERSION } from "../lib/version";
+import { useLang } from "../components/landing/LangContext";
 
 /** Same-origin to avoid CORS; proxied in dev (Vite) and prod (Netlify/Vercel). */
 const STATUS_API_URL = "/api/status";
@@ -40,12 +41,39 @@ const content = {
     error: "Failed to load status",
     loading: "Loading…",
   },
+  ko: {
+    title: "시스템 상태",
+    back: "홈으로",
+    version: "버전",
+    uptime: "가동 시간",
+    database: "데이터베이스",
+    alerts: "알림",
+    aiService: "AI 서비스",
+    operational: "정상",
+    enabled: "활성화",
+    disabled: "비활성화",
+    uptimeChart: "최근 30일 가동률",
+    beta: "beta",
+    error: "상태를 불러오지 못했습니다",
+    loading: "로딩 중…",
+  },
+  es: {
+    title: "Estado del sistema",
+    back: "Volver al inicio",
+    version: "Versión",
+    uptime: "Tiempo activo",
+    database: "Base de datos",
+    alerts: "Alertas",
+    aiService: "Servicio IA",
+    operational: "Operativo",
+    enabled: "Activado",
+    disabled: "Desactivado",
+    uptimeChart: "Disponibilidad últimos 30 días",
+    beta: "beta",
+    error: "No se pudo cargar el estado",
+    loading: "Cargando…",
+  },
 };
-
-function getLang() {
-  if (typeof navigator === "undefined") return "en";
-  return (navigator.language || "").toLowerCase().startsWith("ru") ? "ru" : "en";
-}
 
 // Fake uptime: 99.9% for chart (30 points)
 function getUptimeData() {
@@ -76,8 +104,8 @@ function formatUptime(seconds, lang) {
 }
 
 export default function Status() {
-  const lang = getLang();
-  const t = content[lang];
+  const { lang } = useLang();
+  const t = content[lang] || content.en;
   const [mounted, setMounted] = useState(false);
   const [dark, setDark] = useState(false);
   const [status, setStatus] = useState(null);

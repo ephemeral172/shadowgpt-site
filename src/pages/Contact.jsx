@@ -1,22 +1,20 @@
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Shield } from "lucide-react";
+import { useLang } from "../components/landing/LangContext";
 
 const TALLY_FORM_URL = "https://tally.so/r/Bz1LE5?transparentBackground=1";
-
-function getLang() {
-  if (typeof navigator === "undefined") return "en";
-  return (navigator.language || "").toLowerCase().startsWith("ru") ? "ru" : "en";
-}
 
 const content = {
   ru: { title: "Контакты", back: "На главную" },
   en: { title: "Contact", back: "Back to home" },
+  ko: { title: "연락처", back: "홈으로" },
+  es: { title: "Contacto", back: "Volver al inicio" },
 };
 
 export default function Contact() {
-  const lang = getLang();
-  const t = content[lang];
+  const { lang } = useLang();
+  const t = content[lang] || content.en;
 
   useEffect(() => {
     const script = document.createElement("script");

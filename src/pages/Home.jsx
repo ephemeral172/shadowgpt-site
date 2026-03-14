@@ -10,7 +10,6 @@ import AudienceSection from "../components/landing/AudienceSection";
 import PricingSection from "../components/landing/PricingSection";
 import CTASection from "../components/landing/CTASection";
 import FooterSection from "../components/landing/FooterSection";
-import { LangProvider } from "../components/landing/LangContext";
 import { ThemeProvider } from "../components/landing/ThemeContext";
 
 const Divider = () => (
@@ -22,8 +21,7 @@ const Divider = () => (
 export default function Home() {
   return (
     <ThemeProvider>
-      <LangProvider>
-        <div className="relative min-h-screen bg-white text-gray-900 dark:bg-[#050505] dark:text-white noise-overlay overflow-x-hidden">
+      <div className="relative min-h-screen bg-white text-gray-900 dark:bg-[#050505] dark:text-white noise-overlay overflow-x-hidden">
         <LiquidOrbs />
         <CyberEffects />
         <NavBar />
@@ -44,7 +42,6 @@ export default function Home() {
         <CTASection />
         <FooterSection />
       </div>
-      </LangProvider>
     </ThemeProvider>
   );
 }

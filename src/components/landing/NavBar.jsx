@@ -4,11 +4,15 @@ import { useState, useEffect } from "react";
 import { useLang } from "./LangContext";
 import { useTheme } from "./ThemeContext";
 import { t } from "./translations";
+import { SUPPORTED_LANGS } from "./LangContext";
+
+const LANG_LABELS = { en: "EN", ru: "RU", es: "ES", ko: "KO" };
 
 export default function NavBar() {
   const [scrolled, setScrolled] = useState(false);
-  const { lang } = useLang();
+  const { lang, setLang } = useLang();
   const { theme, toggleTheme } = useTheme();
+  const displayLang = t[lang] ? lang : "en";
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 50);
@@ -32,6 +36,22 @@ export default function NavBar() {
         </div>
 
         <div className="flex items-center gap-3">
+          {/* Language selector */}
+          <div className="glass rounded-full p-1 flex items-center gap-0.5">
+            {SUPPORTED_LANGS.map((l) => (
+              <button
+                key={l}
+                onClick={() => setLang(l)}
+                className={`px-2.5 py-1 rounded-full text-[11px] font-light tracking-wide transition-all duration-300 ${
+                  displayLang === l
+                    ? "glass-highlight text-gray-900 dark:text-white/90"
+                    : "text-gray-400 dark:text-white/30 hover:text-gray-600 dark:hover:text-white/50"
+                }`}
+              >
+                {LANG_LABELS[l]}
+              </button>
+            ))}
+          </div>
           {/* Theme toggle */}
           <button
             onClick={toggleTheme}
@@ -42,10 +62,10 @@ export default function NavBar() {
           </button>
 
           <a href="https://console.shadowgpt.app/login" target="_blank" rel="noopener noreferrer" className="text-xs tracking-wide text-gray-500 dark:text-white/40 hover:text-gray-700 dark:hover:text-white/60 font-light transition-colors">
-            {t[lang].nav.login}
+            {t[displayLang].nav.login}
           </a>
           <a href="https://console.shadowgpt.app/login" target="_blank" rel="noopener noreferrer" className="glass hover:bg-gray-100 dark:hover:bg-white/5 transition-all duration-300 rounded-full px-5 py-2 text-xs tracking-wide text-gray-600 dark:text-white/50 font-light">
-            {t[lang].nav.cta}
+            {t[displayLang].nav.cta}
           </a>
         </div>
       </div>

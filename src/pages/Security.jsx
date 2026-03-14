@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { Shield } from "lucide-react";
+import { useLang } from "../components/landing/LangContext";
 
 const content = {
   ru: {
@@ -60,16 +61,39 @@ const content = {
       },
     ],
   },
+  ko: {
+    title: "보안 및 준수",
+    updated: "최종 업데이트: 2026",
+    back: "홈으로",
+    terms: "이용약관",
+    privacy: "개인정보처리방침",
+    sections: [
+      { title: "원칙: 데이터 내용을 저장하지 않음", body: "ShadowGPT는 프롬프트 텍스트, 첨부 파일 내용(문서, 코드, 이미지) 또는 기타 기밀 사용자 데이터를 저장하지 않습니다. 클라우드에는 이벤트 메타데이터(AI 서비스 출처, 시간, 위험 수준, 조직 내 기기/사용자 식별자)와 위험 분류 결과(HIGH/MEDIUM/LOW, 규칙별 콘텐츠 유형)만 전송됩니다. 텍스트 및 파일의 특징 추출은 확장 프로그램에서 로컬로 수행되며, 원본 콘텐츠는 서버로 전송되지 않습니다." },
+      { title: "메타데이터 저장 위치", body: "이벤트 메타데이터와 계정 데이터는 대시보드 및 알림에 사용되는 클라우드 인프라에서 처리됩니다. 가용성 및 데이터 기밀 요건을 충족하는 제공자를 선택합니다. 제3자와의 데이터 공유 세부사항은 개인정보처리방침에 있습니다." },
+      { title: "152-FZ(러시아 개인정보)", body: "개인정보 처리는 152-FZ에 맞춰 수행됩니다. 처리되는 개인정보 양을 최소화하며, 대화 및 파일 내용은 저장하지 않고 메타데이터와 분류만 저장합니다. Enterprise 플랜에는 152-FZ에 맞춘 AI 정책 생성기가 포함됩니다. 데이터 관리자: Axioma8. 권리 및 요청 방법은 개인정보처리방침에 있습니다." },
+      { title: "GDPR 및 국제 규제", body: "EU 및 기타 관할권 사용자를 위해 GDPR 요건(데이터 최소화, 제한된 처리 목적, 접근·정정·삭제·처리 제한 권리)을 반영합니다. 프롬프트 및 파일 내용은 당사에서 처리하지 않습니다. Enterprise 정책 생성기는 GDPR 등 다른 관할권용 템플릿을 지원합니다. 법적 근거 및 보관 기간은 개인정보처리방침에 있습니다." },
+      { title: "기술적·조직적 조치", body: "무단 접근, 변경 및 파괴로부터 데이터를 보호하기 위한 조치(시스템 접근 제한, 전송 암호화, 사고 모니터링, 프로세스 업데이트)를 적용합니다. 대시보드 데이터 접근은 조직의 권한 있는 사용자와 서비스·지원에 필요한 범위의 당사 직원만 가능합니다." },
+    ],
+  },
+  es: {
+    title: "Seguridad y cumplimiento",
+    updated: "Última actualización: 2026",
+    back: "Volver al inicio",
+    terms: "Términos",
+    privacy: "Política de privacidad",
+    sections: [
+      { title: "Principio: no almacenamos el contenido de sus datos", body: "ShadowGPT no almacena texto de prompts, contenido de adjuntos (documentos, código, imágenes) ni otros datos confidenciales. Solo se envían a la nube metadatos de eventos (origen del servicio de IA, hora, nivel de riesgo, identificador de dispositivo/usuario) y resultados de clasificación (HIGH/MEDIUM/LOW, tipo de contenido). La extracción de características se hace localmente en la extensión; el contenido crudo no se envía al servidor." },
+      { title: "Dónde se almacenan los metadatos", body: "Los metadatos de eventos y los datos de cuenta se procesan en la infraestructura en la nube del panel y las notificaciones. Elegimos proveedores que cumplen requisitos de disponibilidad y confidencialidad. Los detalles sobre cesión a terceros están en la Política de privacidad." },
+      { title: "152-FZ (datos personales en Rusia)", body: "El tratamiento de datos personales se realiza conforme a 152-FZ. Minimizamos el volumen: no almacenamos el contenido de conversaciones ni archivos, solo metadatos y clasificación. El plan Enterprise incluye un generador de política de IA con plantillas alineadas con 152-FZ. Responsable: Axioma8. Derechos y solicitudes en la Política de privacidad." },
+      { title: "GDPR y regulación internacional", body: "Para usuarios en la UE y otras jurisdicciones tenemos en cuenta el GDPR: minimización de datos, fines limitados, derechos de acceso, rectificación, supresión y limitación. El contenido de prompts y archivos no se procesa en nuestro lado. El generador de política en Enterprise soporta plantillas para GDPR y otras jurisdicciones. Bases legales y plazos en la Política de privacidad." },
+      { title: "Medidas técnicas y organizativas", body: "Aplicamos medidas contra el acceso, la alteración y la destrucción no autorizados: restricción de acceso, cifrado en tránsito, supervisión de incidentes y actualización de procesos. Solo los usuarios autorizados de la organización y nuestro personal en la medida necesaria tienen acceso a los datos del panel." },
+    ],
+  },
 };
 
-function getLang() {
-  if (typeof navigator === "undefined") return "en";
-  return (navigator.language || "").toLowerCase().startsWith("ru") ? "ru" : "en";
-}
-
 export default function Security() {
-  const lang = getLang();
-  const t = content[lang];
+  const { lang } = useLang();
+  const t = content[lang] || content.en;
 
   return (
     <div className="min-h-screen bg-white text-gray-900 dark:bg-[#050505] dark:text-white px-6 py-16">
