@@ -4,17 +4,93 @@ import { Shield, Calendar } from "lucide-react";
 import { useLang } from "../components/landing/LangContext";
 import { getPostBySlug } from "../data/blogPosts";
 
-const LANG = { en: "en", ru: "ru", ko: "ko" };
+const BASE_URL = "https://shadowgpt.app";
+
+const DEFAULT_META = {
+  canonical: BASE_URL + "/",
+  ogType: "website",
+  ogUrl: BASE_URL + "/",
+  ogTitle: "ShadowGPT — Corporate protection from AI data leaks",
+  ogDescription: "Monitor and control what employees send to ChatGPT, Claude, Gemini. Browser extension + cloud dashboard. No prompt content stored. Free 7-day audit.",
+  ogImage: BASE_URL + "/og-image.png",
+  ogImageWidth: "1200",
+  ogImageHeight: "630",
+  twitterCard: "summary_large_image",
+  twitterUrl: BASE_URL + "/",
+  twitterTitle: "ShadowGPT — Corporate protection from AI data leaks",
+  twitterDescription: "Monitor and control what employees send to ChatGPT, Claude, Gemini. Browser extension + cloud dashboard. Free 7-day audit.",
+  twitterImage: BASE_URL + "/og-image.png",
+};
+
+function setMeta(attr, content, useProperty = false) {
+  const key = useProperty ? "property" : "name";
+  let el = document.querySelector(`meta[${key}="${attr}"]`);
+  if (!el) {
+    el = document.createElement("meta");
+    el.setAttribute(key, attr);
+    document.head.appendChild(el);
+  }
+  el.setAttribute("content", content);
+}
+
+function setCanonical(href) {
+  let el = document.querySelector('link[rel="canonical"]');
+  if (!el) {
+    el = document.createElement("link");
+    el.setAttribute("rel", "canonical");
+    document.head.appendChild(el);
+  }
+  el.setAttribute("href", href);
+}
+
+function applyPostMeta(post, c) {
+  const postUrl = `${BASE_URL}/Blog/${post.slug}`;
+  const imageUrl = post.image.startsWith("http") ? post.image : BASE_URL + post.image;
+
+  setCanonical(postUrl);
+  setMeta("og:type", "article", true);
+  setMeta("og:url", postUrl, true);
+  setMeta("og:title", c.title, true);
+  setMeta("og:description", c.description, true);
+  setMeta("og:image", imageUrl, true);
+  setMeta("og:image:width", "1200", true);
+  setMeta("og:image:height", "630", true);
+  setMeta("twitter:card", "summary_large_image");
+  setMeta("twitter:url", postUrl);
+  setMeta("twitter:title", c.title);
+  setMeta("twitter:description", c.description);
+  setMeta("twitter:image", imageUrl);
+}
+
+function restoreDefaultMeta() {
+  setCanonical(DEFAULT_META.canonical);
+  setMeta("og:type", DEFAULT_META.ogType, true);
+  setMeta("og:url", DEFAULT_META.ogUrl, true);
+  setMeta("og:title", DEFAULT_META.ogTitle, true);
+  setMeta("og:description", DEFAULT_META.ogDescription, true);
+  setMeta("og:image", DEFAULT_META.ogImage, true);
+  setMeta("og:image:width", DEFAULT_META.ogImageWidth, true);
+  setMeta("og:image:height", DEFAULT_META.ogImageHeight, true);
+  setMeta("twitter:card", DEFAULT_META.twitterCard);
+  setMeta("twitter:url", DEFAULT_META.twitterUrl);
+  setMeta("twitter:title", DEFAULT_META.twitterTitle);
+  setMeta("twitter:description", DEFAULT_META.twitterDescription);
+  setMeta("twitter:image", DEFAULT_META.twitterImage);
+}
+
+const LANG = { en: "en", ru: "ru", ko: "ko", es: "es" };
 
 const UI = {
   en: { back: "Back to home", blog: "Blog", date: "Date" },
   ru: { back: "На главную", blog: "Блог", date: "Дата" },
   ko: { back: "홈으로", blog: "블로그", date: "날짜" },
+  es: { back: "Volver al inicio", blog: "Blog", date: "Fecha" },
 };
 
 function formatDate(iso, lang) {
   const d = new Date(iso);
-  return d.toLocaleDateString(lang === "ru" ? "ru-RU" : lang === "ko" ? "ko-KR" : "en-US", {
+  const locale = lang === "ru" ? "ru-RU" : lang === "ko" ? "ko-KR" : lang === "es" ? "es-ES" : "en-US";
+  return d.toLocaleDateString(locale, {
     year: "numeric",
     month: "long",
     day: "numeric",
@@ -68,6 +144,9 @@ export default function BlogPost() {
       }
       kw.setAttribute("content", c.keywords);
     } else if (kw) kw.remove();
+
+    applyPostMeta(post, c);
+    return () => restoreDefaultMeta();
   }, [post, l, navigate]);
 
   if (!post) {
@@ -79,11 +158,10 @@ export default function BlogPost() {
   }
 
   const content = post[l] || post.en;
-  const baseUrl = "https://shadowgpt.app";
 
   return (
     <div className="min-h-screen bg-white text-gray-900 dark:bg-[#050505] dark:text-white px-6 py-16">
-      <ArticleSchema post={post} lang={l} baseUrl={baseUrl} />
+      <ArticleSchema post={post} lang={l} baseUrl={BASE_URL} />
       <div className="max-w-3xl mx-auto">
         <div className="flex items-center gap-3 mb-8">
           <Link to="/" className="glass rounded-lg p-2 inline-flex">
