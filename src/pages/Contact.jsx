@@ -31,9 +31,9 @@ export default function Contact() {
       <div className="flex-shrink-0 px-6 py-6 border-b border-gray-200 dark:border-white/5">
         <div className="max-w-4xl mx-auto flex items-center gap-3">
           <Link to="/" className="glass rounded-lg p-2 inline-flex">
-            <Shield className="w-4 h-4 text-gray-500 dark:text-white/40" strokeWidth={1.5} />
+            <Shield className="w-4 h-4 text-gray-600 dark:text-white/65" strokeWidth={1.5} />
           </Link>
-          <Link to="/" className="text-sm font-light text-gray-500 dark:text-white/40 hover:text-gray-700 dark:hover:text-white/60">
+          <Link to="/" className="text-sm font-light text-gray-600 dark:text-white/65 hover:text-gray-800 dark:hover:text-white/80">
             {t.back}
           </Link>
           <h1 className="text-xl font-light tracking-tight text-gray-800 dark:text-white/80 ml-2">

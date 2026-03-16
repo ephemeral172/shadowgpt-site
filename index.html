@@ -2,10 +2,67 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#050505" media="(prefers-color-scheme: dark)" />
+    <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)" />
+
+    <!-- Primary meta -->
+    <title>ShadowGPT — Corporate protection from AI data leaks</title>
+    <meta name="description" content="Monitor and control what employees send to ChatGPT, Claude, Gemini. Browser extension + cloud dashboard. 10 min setup. No prompt or file content stored — metadata and risk level only. Free 7-day audit." />
+    <meta name="keywords" content="Shadow AI, AI data leak, ChatGPT monitoring, Claude monitoring, DLP, employee AI use, data loss prevention, AI security" />
+    <link rel="canonical" href="https://shadowgpt.app/" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://shadowgpt.app/" />
+    <meta property="og:title" content="ShadowGPT — Corporate protection from AI data leaks" />
+    <meta property="og:description" content="Monitor and control what employees send to ChatGPT, Claude, Gemini. Browser extension + cloud dashboard. No prompt content stored. Free 7-day audit." />
+    <meta property="og:image" content="https://shadowgpt.app/og-image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:site_name" content="ShadowGPT" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content="https://shadowgpt.app/" />
+    <meta name="twitter:title" content="ShadowGPT — Corporate protection from AI data leaks" />
+    <meta name="twitter:description" content="Monitor and control what employees send to ChatGPT, Claude, Gemini. Browser extension + cloud dashboard. Free 7-day audit." />
+    <meta name="twitter:image" content="https://shadowgpt.app/og-image.png" />
+
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="manifest" href="/manifest.json" />
-    <title>Shadow GPT</title>
+
+    <!-- JSON-LD: WebSite + correct product description for crawlers and AI -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "ShadowGPT",
+      "url": "https://shadowgpt.app",
+      "description": "ShadowGPT is a corporate security product that monitors and controls employee use of AI services (e.g. ChatGPT, Claude, Gemini). It consists of a browser extension and a cloud dashboard. The company does not store prompt or file content — only event metadata and risk classification. It helps prevent data leaks through AI (Shadow AI), not a text humanizer or AI detector bypass tool.",
+      "publisher": {
+        "@type": "Organization",
+        "name": "ShadowGPT"
+      },
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://shadowgpt.app/",
+        "query-input": "required name=search_term_string"
+      }
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "ShadowGPT",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "Chrome, Edge, Yandex Browser",
+      "description": "Browser extension and cloud dashboard to monitor and control employee use of AI services. Prevents corporate data leaks through ChatGPT, Claude, Gemini and 19+ AI services. Risk classification, alerts, audit reports. Does not store prompt or file content."
+    }
+    </script>
   </head>
   <body>
     <div id="root"></div>

@@ -4,8 +4,11 @@ import { defineConfig } from 'vite'
 
 // https://vite.dev/config/
 export default defineConfig({
-  logLevel: 'error', // Suppress warnings, only show errors
+  logLevel: 'info',
   server: {
+    port: 5173,
+    host: true,
+    strictPort: false,
     proxy: {
       '/api/status': {
         target: 'https://console.shadowgpt.app',

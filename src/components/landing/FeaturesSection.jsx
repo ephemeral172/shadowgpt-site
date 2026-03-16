@@ -19,7 +19,7 @@ export default function FeaturesSection() {
           transition={{ duration: 0.8 }}
           className="text-center mb-20"
         >
-          <span className="text-xs tracking-[0.3em] uppercase text-gray-400 dark:text-white/30 font-light">{tx.label}</span>
+          <span className="text-xs tracking-[0.3em] uppercase text-gray-500 dark:text-white/55 font-light">{tx.label}</span>
           <h2 className="text-3xl md:text-5xl font-extralight mt-4 tracking-tight text-gray-900 dark:text-white">
             {tx.title1} <span className="font-semibold">{tx.title2}</span>
           </h2>
@@ -47,10 +47,10 @@ export default function FeaturesSection() {
                     <Icon className="w-5 h-5 text-gray-600 dark:text-white/70" strokeWidth={1.5} />
                   </div>
                   <h3 className="text-lg font-light text-gray-800 dark:text-white/80 mb-3">{feature.title}</h3>
-                  <p className="text-sm text-gray-500 dark:text-white/30 font-light leading-relaxed mb-5">{feature.description}</p>
+                  <p className="text-sm text-gray-600 dark:text-white/60 font-light leading-relaxed mb-5">{feature.description}</p>
                   <div className="flex flex-wrap gap-2">
                     {feature.tags.map((tag) => (
-                      <span key={tag} className="text-[10px] tracking-wider uppercase text-gray-400 dark:text-white/20 glass rounded-full px-3 py-1 font-light">
+                      <span key={tag} className="text-[10px] tracking-wider uppercase text-gray-500 dark:text-white/45 glass rounded-full px-3 py-1 font-light">
                         {tag}
                       </span>
                     ))}

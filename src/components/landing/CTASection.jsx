@@ -43,7 +43,7 @@ export default function CTASection() {
             <span className="font-semibold">{tx.title2}</span>
           </h2>
 
-          <p className="text-gray-500 dark:text-white/30 font-light max-w-lg mx-auto mb-10 leading-relaxed">{tx.desc}</p>
+          <p className="text-gray-600 dark:text-white/60 font-light max-w-lg mx-auto mb-10 leading-relaxed">{tx.desc}</p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <motion.a
@@ -59,7 +59,7 @@ export default function CTASection() {
             </motion.a>
           </div>
 
-          <p className="text-xs text-gray-400 dark:text-white/15 mt-8 font-light">shadowgpt.app</p>
+          <p className="text-xs text-gray-500 dark:text-white/40 mt-8 font-light">shadowgpt.app</p>
         </motion.div>
       </div>
     </section>

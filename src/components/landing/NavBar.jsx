@@ -30,9 +30,9 @@ export default function NavBar() {
       <div className="max-w-6xl mx-auto flex items-center justify-between px-6 py-4">
         <div className="flex items-center gap-3">
           <div className="glass rounded-lg p-1.5">
-            <Shield className="w-4 h-4 text-gray-600 dark:text-white/60" strokeWidth={1.5} />
+            <Shield className="w-4 h-4 text-gray-700 dark:text-white/80" strokeWidth={1.5} />
           </div>
-          <span className="text-sm font-light text-gray-600 dark:text-white/60 tracking-wide">ShadowGPT</span>
+          <span className="text-sm font-light text-gray-700 dark:text-white/80 tracking-wide">ShadowGPT</span>
         </div>
 
         <div className="flex items-center gap-3">
@@ -45,7 +45,7 @@ export default function NavBar() {
                 className={`px-2.5 py-1 rounded-full text-[11px] font-light tracking-wide transition-all duration-300 ${
                   displayLang === l
                     ? "glass-highlight text-gray-900 dark:text-white/90"
-                    : "text-gray-400 dark:text-white/30 hover:text-gray-600 dark:hover:text-white/50"
+                    : "text-gray-500 dark:text-white/55 hover:text-gray-700 dark:hover:text-white/75"
                 }`}
               >
                 {LANG_LABELS[l]}
@@ -55,16 +55,16 @@ export default function NavBar() {
           {/* Theme toggle */}
           <button
             onClick={toggleTheme}
-            className="glass rounded-full p-2 text-gray-500 dark:text-white/50 hover:text-gray-700 dark:hover:text-white/70 transition-all duration-300"
+            className="glass rounded-full p-2 text-gray-600 dark:text-white/70 hover:text-gray-800 dark:hover:text-white/90 transition-all duration-300"
             aria-label={theme === "dark" ? "Switch to light theme" : "Switch to dark theme"}
           >
             {theme === "dark" ? <Sun className="w-4 h-4" /> : <Moon className="w-4 h-4" />}
           </button>
 
-          <a href="https://console.shadowgpt.app/login" target="_blank" rel="noopener noreferrer" className="text-xs tracking-wide text-gray-500 dark:text-white/40 hover:text-gray-700 dark:hover:text-white/60 font-light transition-colors">
+          <a href="https://console.shadowgpt.app/login" target="_blank" rel="noopener noreferrer" className="text-xs tracking-wide text-gray-600 dark:text-white/65 hover:text-gray-800 dark:hover:text-white/85 font-light transition-colors">
             {t[displayLang].nav.login}
           </a>
-          <a href="https://console.shadowgpt.app/login" target="_blank" rel="noopener noreferrer" className="glass hover:bg-gray-100 dark:hover:bg-white/5 transition-all duration-300 rounded-full px-5 py-2 text-xs tracking-wide text-gray-600 dark:text-white/50 font-light">
+          <a href="https://console.shadowgpt.app/login" target="_blank" rel="noopener noreferrer" className="glass hover:bg-gray-100 dark:hover:bg-white/5 transition-all duration-300 rounded-full px-5 py-2 text-xs tracking-wide text-gray-700 dark:text-white/75 font-light">
             {t[displayLang].nav.cta}
           </a>
         </div>

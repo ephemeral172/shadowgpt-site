@@ -22,6 +22,15 @@ export const AuthProvider = ({ children }) => {
       setIsLoadingPublicSettings(true);
       setAuthError(null);
 
+      // Локальная разработка: на localhost без токена показываем сайт без проверки Base44
+      const isLocalDev = typeof window !== 'undefined' && window.location.hostname === 'localhost' && !appParams.token;
+      if (isLocalDev) {
+        setIsLoadingPublicSettings(false);
+        setIsLoadingAuth(false);
+        setIsAuthenticated(false);
+        return;
+      }
+
       // Без Base44 (нет appId) — не делаем запросы, просто выключаем загрузку
       if (!appParams.appId || String(appParams.appId).trim() === '') {
         setIsLoadingPublicSettings(false);

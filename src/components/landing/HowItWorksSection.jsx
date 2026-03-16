@@ -41,7 +41,7 @@ export default function HowItWorksSection() {
           transition={{ duration: 0.8 }}
           className="text-center mb-20"
         >
-          <span className="text-xs tracking-[0.3em] uppercase text-gray-400 dark:text-white/30 font-light">{tx.label}</span>
+          <span className="text-xs tracking-[0.3em] uppercase text-gray-500 dark:text-white/55 font-light">{tx.label}</span>
           <h2 className="text-3xl md:text-5xl font-extralight mt-4 tracking-tight text-gray-900 dark:text-white">
             {tx.title1} <span className="font-semibold">{tx.title2}</span>
           </h2>
@@ -99,7 +99,7 @@ export default function HowItWorksSection() {
                       }}
                       transition={{ duration: 0.4 }}
                     >
-                      <Icon className={`w-4 h-4 transition-all duration-500 ${isActive ? "text-gray-900 dark:text-white/90" : "text-gray-400 dark:text-white/25"}`} strokeWidth={1.5} />
+                      <Icon className={`w-4 h-4 transition-all duration-500 ${isActive ? "text-gray-900 dark:text-white/90" : "text-gray-500 dark:text-white/50"}`} strokeWidth={1.5} />
                     </motion.div>
                   </div>
 
@@ -122,19 +122,19 @@ export default function HowItWorksSection() {
 
                       <div className="md:hidden mb-4">
                         <div className={`w-9 h-9 rounded-lg flex items-center justify-center ${isActive ? "glass-highlight" : "glass"}`}>
-                          <Icon className={`w-3.5 h-3.5 ${isActive ? "text-gray-900 dark:text-white/90" : "text-gray-400 dark:text-white/30"}`} strokeWidth={1.5} />
+                          <Icon className={`w-3.5 h-3.5 ${isActive ? "text-gray-900 dark:text-white/90" : "text-gray-500 dark:text-white/55"}`} strokeWidth={1.5} />
                         </div>
                       </div>
 
-                      <span className="text-[10px] tracking-[0.25em] uppercase text-gray-400 dark:text-white/20 font-light">
+                      <span className="text-[10px] tracking-[0.25em] uppercase text-gray-500 dark:text-white/45 font-light">
                         {tx.stepLabel} {i + 1}
                       </span>
 
-                      <h3 className={`text-lg font-light mt-1.5 transition-colors duration-500 ${isActive ? "text-gray-900 dark:text-white/90" : "text-gray-600 dark:text-white/50"}`}>
+                      <h3 className={`text-lg font-light mt-1.5 transition-colors duration-500 ${isActive ? "text-gray-900 dark:text-white/90" : "text-gray-700 dark:text-white/75"}`}>
                         {step.title}
                       </h3>
 
-                      <p className={`text-sm mt-2 font-light leading-relaxed transition-colors duration-500 ${isActive ? "text-gray-500 dark:text-white/40" : "text-gray-400 dark:text-white/20"}`}>
+                      <p className={`text-sm mt-2 font-light leading-relaxed transition-colors duration-500 ${isActive ? "text-gray-600 dark:text-white/65" : "text-gray-500 dark:text-white/45"}`}>
                         {step.description}
                       </p>
 
@@ -145,7 +145,7 @@ export default function HowItWorksSection() {
                         className="overflow-hidden"
                       >
                         <div className="mt-4 glass rounded-xl px-4 py-3 border-l-2 border-gray-200 dark:border-white/10">
-                          <p className="text-xs text-gray-500 dark:text-white/30 font-mono leading-relaxed">{step.detail}</p>
+                          <p className="text-xs text-gray-600 dark:text-white/55 font-mono leading-relaxed">{step.detail}</p>
                         </div>
                       </motion.div>
                     </motion.div>

@@ -173,7 +173,7 @@ export default function Status() {
     return (
       <div className="min-h-screen bg-gray-50/80 dark:bg-[#050505] text-gray-900 dark:text-white px-4 py-10 flex items-center justify-center">
         <div className="max-w-md text-center">
-          <p className="text-gray-500 dark:text-white/50 font-light mb-4">{t.error}</p>
+          <p className="text-gray-600 dark:text-white/70 font-light mb-4">{t.error}</p>
           <Link to="/" className="text-sm underline text-gray-600 dark:text-white/60 hover:text-gray-800 dark:hover:text-white/80">
             {t.back}
           </Link>
@@ -188,7 +188,7 @@ export default function Status() {
         <div className="flex items-center gap-3 mb-10">
           <Link
             to="/"
-            className="inline-flex items-center gap-2 rounded-lg px-3 py-2 text-sm font-light text-gray-500 dark:text-white/40 hover:bg-gray-200/50 dark:hover:bg-white/5 hover:text-gray-700 dark:hover:text-white/60 transition-colors"
+            className="inline-flex items-center gap-2 rounded-lg px-3 py-2 text-sm font-light text-gray-600 dark:text-white/65 hover:bg-gray-200/50 dark:hover:bg-white/5 hover:text-gray-800 dark:hover:text-white/80 transition-colors"
           >
             <Shield className="w-4 h-4" strokeWidth={1.5} />
             {t.back}
@@ -198,14 +198,14 @@ export default function Status() {
         <h1 className="text-3xl md:text-4xl font-light tracking-tight text-gray-900 dark:text-white mb-2">
           {t.title}
         </h1>
-        <p className="text-sm text-gray-500 dark:text-white/40 font-light mb-10">
+        <p className="text-sm text-gray-600 dark:text-white/65 font-light mb-10">
           ShadowGPT · {t.beta}
         </p>
 
         {/* Status cards grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-10">
           <div className={cardClass}>
-            <div className="flex items-center gap-2 text-gray-500 dark:text-white/40 text-xs font-medium uppercase tracking-wider mb-1">
+            <div className="flex items-center gap-2 text-gray-600 dark:text-white/65 text-xs font-medium uppercase tracking-wider mb-1">
               <Activity className="w-3.5 h-3.5" strokeWidth={1.5} />
               {t.version}
             </div>
@@ -215,7 +215,7 @@ export default function Status() {
           </div>
 
           <div className={cardClass}>
-            <div className="flex items-center gap-2 text-gray-500 dark:text-white/40 text-xs font-medium uppercase tracking-wider mb-1">
+            <div className="flex items-center gap-2 text-gray-600 dark:text-white/65 text-xs font-medium uppercase tracking-wider mb-1">
               <Activity className="w-3.5 h-3.5" strokeWidth={1.5} />
               {t.uptime}
             </div>
@@ -227,7 +227,7 @@ export default function Status() {
           <div className={cardClass}>
             <div className="flex items-center justify-between">
               <div>
-                <div className="flex items-center gap-2 text-gray-500 dark:text-white/40 text-xs font-medium uppercase tracking-wider mb-1">
+                <div className="flex items-center gap-2 text-gray-600 dark:text-white/65 text-xs font-medium uppercase tracking-wider mb-1">
                   <Database className="w-3.5 h-3.5" strokeWidth={1.5} />
                   {t.database}
                 </div>
@@ -242,7 +242,7 @@ export default function Status() {
           <div className={cardClass}>
             <div className="flex items-center justify-between">
               <div>
-                <div className="flex items-center gap-2 text-gray-500 dark:text-white/40 text-xs font-medium uppercase tracking-wider mb-1">
+                <div className="flex items-center gap-2 text-gray-600 dark:text-white/65 text-xs font-medium uppercase tracking-wider mb-1">
                   <Bell className="w-3.5 h-3.5" strokeWidth={1.5} />
                   {t.alerts}
                 </div>
@@ -257,7 +257,7 @@ export default function Status() {
           <div className={cardClass}>
             <div className="flex items-center justify-between">
               <div>
-                <div className="flex items-center gap-2 text-gray-500 dark:text-white/40 text-xs font-medium uppercase tracking-wider mb-1">
+                <div className="flex items-center gap-2 text-gray-600 dark:text-white/65 text-xs font-medium uppercase tracking-wider mb-1">
                   <Cpu className="w-3.5 h-3.5" strokeWidth={1.5} />
                   {t.aiService}
                 </div>
@@ -272,7 +272,7 @@ export default function Status() {
 
         {/* Uptime chart */}
         <div className={cardClass}>
-          <h2 className="text-sm font-medium text-gray-500 dark:text-white/40 uppercase tracking-wider mb-4">
+          <h2 className="text-sm font-medium text-gray-600 dark:text-white/65 uppercase tracking-wider mb-4">
             {t.uptimeChart}
           </h2>
           <div className="h-48 md:h-56">
@@ -320,8 +320,8 @@ export default function Status() {
           </div>
         </div>
 
-        <p className="mt-8 text-center text-xs text-gray-400 dark:text-white/25 font-light">
-          <Link to="/" className="underline hover:text-gray-600 dark:hover:text-white/40">
+        <p className="mt-8 text-center text-xs text-gray-500 dark:text-white/50 font-light">
+          <Link to="/" className="underline hover:text-gray-700 dark:hover:text-white/70">
             {t.back}
           </Link>
         </p>

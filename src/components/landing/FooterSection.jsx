@@ -13,22 +13,22 @@ export default function FooterSection() {
         <div className="flex flex-col md:flex-row items-center justify-between gap-8">
           <div className="flex items-center gap-3">
             <div className="glass rounded-lg p-2">
-              <Shield className="w-4 h-4 text-gray-500 dark:text-white/40" strokeWidth={1.5} />
+              <Shield className="w-4 h-4 text-gray-600 dark:text-white/65" strokeWidth={1.5} />
             </div>
-            <span className="text-sm font-light text-gray-500 dark:text-white/40">ShadowGPT</span>
+            <span className="text-sm font-light text-gray-600 dark:text-white/65">ShadowGPT</span>
           </div>
 
           <div className="flex flex-wrap items-center justify-center md:justify-end gap-6 md:gap-8">
-            <a href="https://console.shadowgpt.app/login" target="_blank" rel="noopener noreferrer" className="text-xs text-gray-400 dark:text-white/15 font-light hover:text-gray-500 dark:hover:text-white/30">{footer.login}</a>
-            <Link to="/FAQ" className="text-xs text-gray-400 dark:text-white/15 font-light hover:text-gray-500 dark:hover:text-white/30">{footer.faq}</Link>
-            <Link to="/Help" className="text-xs text-gray-400 dark:text-white/15 font-light hover:text-gray-500 dark:hover:text-white/30">{footer.help}</Link>
-            <Link to="/Security" className="text-xs text-gray-400 dark:text-white/15 font-light hover:text-gray-500 dark:hover:text-white/30">{footer.security}</Link>
-            <Link to="/Integrations" className="text-xs text-gray-400 dark:text-white/15 font-light hover:text-gray-500 dark:hover:text-white/30">{footer.integrations}</Link>
-            <Link to="/Contact" className="text-xs text-gray-400 dark:text-white/15 font-light hover:text-gray-500 dark:hover:text-white/30">{footer.contact}</Link>
-            <Link to="/Status" className="text-xs text-gray-400 dark:text-white/15 font-light hover:text-gray-500 dark:hover:text-white/30">{footer.status}</Link>
-            <Link to="/Terms" className="text-xs text-gray-400 dark:text-white/15 font-light hover:text-gray-500 dark:hover:text-white/30">{footer.terms}</Link>
-            <Link to="/Privacy" className="text-xs text-gray-400 dark:text-white/15 font-light hover:text-gray-500 dark:hover:text-white/30">{footer.privacy}</Link>
-            <span className="text-xs text-gray-400 dark:text-white/15 font-light">{footer.poweredBy}</span>
+            <a href="https://console.shadowgpt.app/login" target="_blank" rel="noopener noreferrer" className="text-xs text-gray-600 dark:text-white/65 font-light hover:text-gray-700 dark:hover:text-white/75">{footer.login}</a>
+            <Link to="/FAQ" className="text-xs text-gray-600 dark:text-white/65 font-light hover:text-gray-700 dark:hover:text-white/75">{footer.faq}</Link>
+            <Link to="/Help" className="text-xs text-gray-600 dark:text-white/65 font-light hover:text-gray-700 dark:hover:text-white/75">{footer.help}</Link>
+            <Link to="/Security" className="text-xs text-gray-600 dark:text-white/65 font-light hover:text-gray-700 dark:hover:text-white/75">{footer.security}</Link>
+            <Link to="/Integrations" className="text-xs text-gray-600 dark:text-white/65 font-light hover:text-gray-700 dark:hover:text-white/75">{footer.integrations}</Link>
+            <Link to="/Contact" className="text-xs text-gray-600 dark:text-white/65 font-light hover:text-gray-700 dark:hover:text-white/75">{footer.contact}</Link>
+            <Link to="/Status" className="text-xs text-gray-600 dark:text-white/65 font-light hover:text-gray-700 dark:hover:text-white/75">{footer.status}</Link>
+            <Link to="/Terms" className="text-xs text-gray-600 dark:text-white/65 font-light hover:text-gray-700 dark:hover:text-white/75">{footer.terms}</Link>
+            <Link to="/Privacy" className="text-xs text-gray-600 dark:text-white/65 font-light hover:text-gray-700 dark:hover:text-white/75">{footer.privacy}</Link>
+            <span className="text-xs text-gray-600 dark:text-white/65 font-light">{footer.poweredBy}</span>
           </div>
         </div>
       </div>

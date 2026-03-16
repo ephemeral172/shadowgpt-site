@@ -100,28 +100,28 @@ export default function Security() {
       <div className="max-w-2xl mx-auto">
         <div className="flex items-center gap-3 mb-8">
           <Link to="/" className="glass rounded-lg p-2 inline-flex">
-            <Shield className="w-4 h-4 text-gray-500 dark:text-white/40" strokeWidth={1.5} />
+            <Shield className="w-4 h-4 text-gray-600 dark:text-white/65" strokeWidth={1.5} />
           </Link>
-          <Link to="/" className="text-sm font-light text-gray-500 dark:text-white/40 hover:text-gray-700 dark:hover:text-white/60">
+          <Link to="/" className="text-sm font-light text-gray-600 dark:text-white/65 hover:text-gray-800 dark:hover:text-white/80">
             {t.back}
           </Link>
         </div>
 
         <h1 className="text-3xl font-light tracking-tight mb-2">{t.title}</h1>
-        <p className="text-xs text-gray-400 dark:text-white/25 mb-10">{t.updated}</p>
+        <p className="text-xs text-gray-500 dark:text-white/50 mb-10">{t.updated}</p>
 
         <div className="space-y-8">
           {t.sections.map((section, i) => (
             <section key={i}>
               <h2 className="text-lg font-medium text-gray-800 dark:text-white/80 mb-2">{section.title}</h2>
-              <p className="text-sm text-gray-600 dark:text-white/45 font-light leading-relaxed">{section.body}</p>
+              <p className="text-sm text-gray-700 dark:text-white/75 font-light leading-relaxed">{section.body}</p>
             </section>
           ))}
         </div>
 
-        <p className="mt-12 pt-8 border-t border-gray-200 dark:border-white/5 text-sm text-gray-500 dark:text-white/30 space-x-4">
-          <Link to="/Terms" className="underline hover:text-gray-700 dark:hover:text-white/50">{t.terms}</Link>
-          <Link to="/Privacy" className="underline hover:text-gray-700 dark:hover:text-white/50">{t.privacy}</Link>
+        <p className="mt-12 pt-8 border-t border-gray-200 dark:border-white/5 text-sm text-gray-600 dark:text-white/55 space-x-4">
+          <Link to="/Terms" className="underline hover:text-gray-800 dark:hover:text-white/80">{t.terms}</Link>
+          <Link to="/Privacy" className="underline hover:text-gray-800 dark:hover:text-white/80">{t.privacy}</Link>
         </p>
       </div>
     </div>

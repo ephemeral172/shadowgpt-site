@@ -73,7 +73,7 @@ export default function HeroSection() {
           className="inline-flex items-center gap-2 glass rounded-full px-5 py-2 mb-8"
         >
           <div className="w-2 h-2 rounded-full bg-gray-500 dark:bg-white/60 pulse-glow" />
-          <span className="text-xs tracking-[0.2em] uppercase text-gray-500 dark:text-white/50 font-light">{tx.badge}</span>
+          <span className="text-xs tracking-[0.2em] uppercase text-gray-600 dark:text-white/70 font-light">{tx.badge}</span>
         </motion.div>
 
         <motion.div
@@ -102,7 +102,7 @@ export default function HeroSection() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="text-lg md:text-xl text-gray-500 dark:text-white/40 font-light max-w-2xl mx-auto leading-relaxed mb-4"
+          className="text-lg md:text-xl text-gray-600 dark:text-white/65 font-light max-w-2xl mx-auto leading-relaxed mb-4"
         >
           {tx.subtitle}
         </motion.p>
@@ -111,7 +111,7 @@ export default function HeroSection() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.1 }}
-          className="text-sm md:text-base text-gray-400 dark:text-white/25 font-light max-w-xl mx-auto leading-relaxed mb-2"
+          className="text-sm md:text-base text-gray-600 dark:text-white/65 font-light max-w-xl mx-auto leading-relaxed mb-2"
         >
           {tx.desc}
         </motion.p>
@@ -121,7 +121,7 @@ export default function HeroSection() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-xs md:text-sm text-gray-500 dark:text-white/30 font-light max-w-xl mx-auto leading-relaxed mb-12"
+            className="text-xs md:text-sm text-gray-600 dark:text-white/55 font-light max-w-xl mx-auto leading-relaxed mb-12"
           >
             {tx.localAi}
           </motion.p>
@@ -139,7 +139,7 @@ export default function HeroSection() {
           <button
             type="button"
             onClick={() => document.getElementById("learn-more")?.scrollIntoView({ behavior: "smooth" })}
-            className="glass hover:bg-gray-100 dark:hover:bg-white/5 transition-all duration-500 rounded-full px-8 py-3.5 text-sm tracking-wide text-gray-600 dark:text-white/50 font-light"
+            className="glass hover:bg-gray-100 dark:hover:bg-white/5 transition-all duration-500 rounded-full px-8 py-3.5 text-sm tracking-wide text-gray-700 dark:text-white/80 font-light"
           >
             {tx.cta2}
           </button>
@@ -151,7 +151,7 @@ export default function HeroSection() {
         animate={{ y: [0, 8, 0] }}
         transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
       >
-        <ArrowDown className="w-5 h-5 text-gray-300 dark:text-white/15" />
+        <ArrowDown className="w-5 h-5 text-gray-400 dark:text-white/35" />
       </motion.div>
     </section>
   );
