@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 import { Shield, Sun, Moon } from "lucide-react";
 import { useState, useEffect } from "react";
 import { useLang } from "./LangContext";
@@ -60,6 +61,10 @@ export default function NavBar() {
           >
             {theme === "dark" ? <Sun className="w-4 h-4" /> : <Moon className="w-4 h-4" />}
           </button>
+
+          <Link to="/Blog" className="text-xs tracking-wide text-gray-600 dark:text-white/65 hover:text-gray-800 dark:hover:text-white/85 font-light transition-colors">
+            {t[displayLang].footer.blog}
+          </Link>
 
           <a href="https://console.shadowgpt.app/login" target="_blank" rel="noopener noreferrer" className="text-xs tracking-wide text-gray-600 dark:text-white/65 hover:text-gray-800 dark:hover:text-white/85 font-light transition-colors">
             {t[displayLang].nav.login}
