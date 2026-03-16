@@ -3,8 +3,9 @@ import { useLocation } from "react-router-dom";
 
 const PAGE_META = {
   "/": {
-    title: "ShadowGPT — Corporate protection from AI data leaks",
-    description: "Monitor and control what employees send to ChatGPT, Claude, Gemini. Browser extension + cloud dashboard. Free 7-day audit.",
+    title: "Shadow AI Protection | ShadowGPT — Monitor ChatGPT, Claude, Gemini",
+    description: "Shadow AI protection: monitor and control what employees send to ChatGPT, Claude, Gemini. Browser extension + cloud dashboard. No prompt content stored. Free 7-day audit.",
+    keywords: "shadow AI, Shadow AI, ChatGPT monitoring, AI data leak, corporate AI security, employee AI use, DLP, enterprise AI monitoring, ChatGPT monitoring tool, AI compliance, 섀도우 AI, ChatGPT 모니터링, 기업 AI 보안, Shadow AI защита, мониторинг ChatGPT, утечка данных ИИ, контроль использования ИИ",
   },
   "/Terms": {
     title: "Terms of Use — ShadowGPT",
@@ -39,8 +40,9 @@ const PAGE_META = {
     description: "ShadowGPT system status: version, uptime, database, alerts, AI service availability.",
   },
   "/Blog": {
-    title: "Blog — ShadowGPT",
-    description: "Articles on Shadow AI, corporate data protection, ChatGPT monitoring, and how ShadowGPT works. EN, RU, KO.",
+    title: "Shadow AI & Corporate AI Security Blog — ShadowGPT",
+    description: "Shadow AI, ChatGPT monitoring, corporate data protection, DLP for AI. Articles in EN, RU, KO, ES. How to control employee AI use.",
+    keywords: "shadow AI, Shadow AI blog, ChatGPT monitoring, corporate AI security, AI data leak, DLP, employee AI use, AI compliance, enterprise AI monitoring, prevent data leak ChatGPT, 섀도우 AI 블로그, ChatGPT 모니터링, 기업 AI 보안, Shadow AI блог, мониторинг ChatGPT, утечка данных ИИ, корпоративная защита ИИ",
   },
 };
 
@@ -56,7 +58,16 @@ export default function PageMeta() {
     document.title = meta.title;
     const desc = document.querySelector('meta[name="description"]');
     if (desc) desc.setAttribute("content", meta.description);
-  }, [meta.title, meta.description]);
+    let kw = document.querySelector('meta[name="keywords"]');
+    if (meta.keywords) {
+      if (!kw) {
+        kw = document.createElement("meta");
+        kw.setAttribute("name", "keywords");
+        document.head.appendChild(kw);
+      }
+      kw.setAttribute("content", meta.keywords);
+    }
+  }, [meta.title, meta.description, meta.keywords]);
 
   return null;
 }

@@ -54,6 +54,11 @@ export default function StatsSection() {
           <h2 className="text-3xl md:text-5xl font-extralight mt-4 tracking-tight text-gray-900 dark:text-white">
             {tx.title1} <span className="font-semibold">{tx.title2}</span>
           </h2>
+          {tx.whatIs && (
+            <p className="text-base md:text-lg text-gray-600 dark:text-white/70 mt-3 max-w-2xl mx-auto font-light" itemProp="description">
+              {tx.whatIs}
+            </p>
+          )}
           <p className="text-gray-700 dark:text-white/80 mt-4 max-w-lg mx-auto font-light">{tx.desc}</p>
         </motion.div>
 

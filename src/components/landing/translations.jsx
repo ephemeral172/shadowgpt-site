@@ -27,6 +27,7 @@ export const t = {
     },
     stats: {
       label: "Проблема",
+      whatIs: "Shadow AI — это использование сотрудниками ChatGPT, Claude, Gemini и других ИИ без видимости и контроля со стороны компании.",
       title1: "Shadow AI — угроза",
       title2: "номер один",
       desc: "Сотрудники каждый день копируют конфиденциальную информацию в ChatGPT, Claude, Gemini — и никто этого не контролирует.",
@@ -244,6 +245,7 @@ export const t = {
     },
     stats: {
       label: "The Problem",
+      whatIs: "Shadow AI is employees using ChatGPT, Claude, Gemini and other AI tools without visibility or control by the company.",
       title1: "Shadow AI — threat",
       title2: "number one",
       desc: "Every day employees paste confidential data into ChatGPT, Claude, Gemini — and no one controls it.",
@@ -451,6 +453,7 @@ export const t = {
     },
     stats: {
       label: "문제",
+      whatIs: "섀도우 AI는 직원이 회사의 가시성·통제 없이 ChatGPT, Claude, Gemini 등 AI 도구를 사용하는 것을 말합니다.",
       title1: "Shadow AI — 1순위",
       title2: "위협",
       desc: "직원들이 매일 ChatGPT, Claude, Gemini에 기밀 정보를 붙여넣고 있으며, 이를 통제하는 이가 없습니다.",
@@ -547,6 +550,7 @@ export const t = {
     },
     stats: {
       label: "El problema",
+      whatIs: "Shadow AI es el uso de ChatGPT, Claude, Gemini y otras IA por empleados sin visibilidad ni control por parte de la empresa.",
       title1: "Shadow AI — amenaza",
       title2: "número uno",
       desc: "Cada día los empleados pegan datos confidenciales en ChatGPT, Claude, Gemini y nadie lo controla.",
