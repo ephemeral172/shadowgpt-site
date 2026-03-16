@@ -34,7 +34,8 @@ const content = {
       },
       {
         title: "7. Контакты",
-        body: "Оператор сервиса — Axioma8. По вопросам условий использования: через форму обратной связи на сайте или указанные контактные данные.",
+        body: "Оператор сервиса — Акулов Сергей Владимирович. По вопросам условий использования: ",
+        contactLink: "страница контактов",
       },
     ],
     back: "На главную",
@@ -71,7 +72,8 @@ const content = {
       },
       {
         title: "7. Contact",
-        body: "Service operator: Axioma8. For questions about these terms: via the website contact form or the contact details provided.",
+        body: "Service operator: Akulov Sergey Vladimirovich. For questions about these terms: ",
+        contactLink: "Contact page",
       },
     ],
     back: "Back to home",
@@ -88,7 +90,7 @@ const content = {
       { title: "4. 개인정보", body: "개인정보 처리에 관한 내용은 개인정보처리방침에 명시되어 있습니다. 사용자의 프롬프트 텍스트나 파일 내용은 저장하지 않으며, 이벤트 메타데이터와 위험 수준만 저장합니다." },
       { title: "5. 책임 제한", body: "서비스는 '있는 그대로' 제공됩니다. 적용 법률이 허용하는 범위 내에서 서비스 이용 또는 이용 불가로 인한 간접적 손해에 대해 책임지지 않습니다." },
       { title: "6. 변경", body: "당사는 본 약관을 변경할 수 있습니다. 중요한 변경은 사이트 게시 또는 사용자 통지 후 효력이 발생하며, 변경 후에도 이용을 계속하면 새 약관에 동의한 것으로 봅니다." },
-      { title: "7. 연락처", body: "서비스 운영: Axioma8. 약관 관련 문의: 웹사이트 연락 폼 또는 제공된 연락처로 문의하세요." },
+      { title: "7. 연락처", body: "서비스 운영: 아쿨로프 세르게이 블라디미로비치. 약관 관련 문의: ", contactLink: "연락처 페이지" },
     ],
     back: "홈으로",
     privacy: "개인정보처리방침",
@@ -104,7 +106,7 @@ const content = {
       { title: "4. Privacidad", body: "El tratamiento de datos personales se describe en la Política de privacidad. No almacenamos el texto de los prompts ni el contenido de archivos de los usuarios, solo metadatos de eventos y nivel de riesgo." },
       { title: "5. Limitación de responsabilidad", body: "El servicio se proporciona \"tal cual\". No somos responsables de daños indirectos derivados del uso o la imposibilidad de usar el servicio, en la medida permitida por la ley aplicable." },
       { title: "6. Cambios", body: "Podemos modificar estos términos. Los cambios sustanciales entran en vigor tras su publicación en el sitio o notificación a los usuarios. El uso continuado constituye la aceptación de los nuevos términos." },
-      { title: "7. Contacto", body: "Operador del servicio: Axioma8. Para consultas sobre estos términos: a través del formulario de contacto del sitio o los datos de contacto indicados." },
+      { title: "7. Contacto", body: "Operador del servicio: Akulov Sergey Vladimirovich. Para consultas sobre estos términos: ", contactLink: "página de contacto" },
     ],
     back: "Volver al inicio",
     privacy: "Política de privacidad",
@@ -135,7 +137,14 @@ export default function Terms() {
           {t.sections.map((section, i) => (
             <section key={i}>
               <h2 className="text-lg font-medium text-gray-800 dark:text-white/80 mb-2">{section.title}</h2>
-              <p className="text-sm text-gray-600 dark:text-white/45 font-light leading-relaxed">{section.body}</p>
+              <p className="text-sm text-gray-600 dark:text-white/45 font-light leading-relaxed">
+                {section.body}
+                {section.contactLink && (
+                  <Link to="/Contact" className="underline hover:text-gray-700 dark:hover:text-white/50">
+                    {section.contactLink}
+                  </Link>
+                )}
+              </p>
             </section>
           ))}
         </div>
