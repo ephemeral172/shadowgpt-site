@@ -38,6 +38,10 @@ const PAGE_META = {
     title: "System Status — ShadowGPT",
     description: "ShadowGPT system status: version, uptime, database, alerts, AI service availability.",
   },
+  "/Blog": {
+    title: "Blog — ShadowGPT",
+    description: "Articles on Shadow AI, corporate data protection, ChatGPT monitoring, and how ShadowGPT works. EN, RU, KO.",
+  },
 };
 
 const DEFAULT_TITLE = "ShadowGPT";

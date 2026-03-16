@@ -56,6 +56,7 @@ import Security from './pages/Security';
 import Integrations from './pages/Integrations';
 import Contact from './pages/Contact';
 import Status from './pages/Status';
+import Blog from './pages/Blog';
 import __Layout from './Layout.jsx';
 
 
@@ -69,6 +70,7 @@ export const PAGES = {
     "Integrations": Integrations,
     "Contact": Contact,
     "Status": Status,
+    "Blog": Blog,
 }
 
 export const pagesConfig = {

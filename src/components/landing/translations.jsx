@@ -13,6 +13,7 @@ export const t = {
       integrations: "Интеграции",
       contact: "Контакты",
       status: "Состояние системы",
+      blog: "Блог",
       login: "Вход",
       poweredBy: "Powered by Axioma8 © 2026",
     },
@@ -229,6 +230,7 @@ export const t = {
       integrations: "Integrations",
       contact: "Contact",
       status: "System status",
+      blog: "Blog",
       login: "Log in",
       poweredBy: "Powered by Axioma8 © 2026",
     },
@@ -436,6 +438,7 @@ export const t = {
     footer: {
       terms: "이용약관", privacy: "개인정보처리방침", faq: "FAQ", help: "도움말",
       security: "보안", integrations: "연동", contact: "연락처", status: "시스템 상태",
+      blog: "블로그",
       login: "로그인", poweredBy: "Powered by Axioma8 © 2026",
     },
     hero: {
@@ -531,6 +534,7 @@ export const t = {
     footer: {
       terms: "Términos", privacy: "Privacidad", faq: "FAQ", help: "Ayuda",
       security: "Seguridad", integrations: "Integraciones", contact: "Contacto", status: "Estado del sistema",
+      blog: "Blog",
       login: "Entrar", poweredBy: "Powered by Axioma8 © 2026",
     },
     hero: {
