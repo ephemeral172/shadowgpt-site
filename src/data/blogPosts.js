@@ -198,7 +198,7 @@ export const BLOG_POSTS = [
   {
     slug: "eu-ai-act-2026-visibility",
     date: "2026-02-20",
-    image: "/blog/shadow-ai-risk-2026.jpg",
+    image: "/blog/eu-ai-act-2026-visibility.jpg",
     en: {
       title: "EU AI Act 2026: Why Visibility Over Employee AI Use Matters Now",
       description: "From August 2026 the EU AI Act requires proper logging, transparency, and human oversight for high-risk AI. If your people use ChatGPT, Claude, or Gemini, you need a story—and data—to show you're in control.",
@@ -248,7 +248,7 @@ export const BLOG_POSTS = [
   {
     slug: "claude-chatgpt-breach-lessons-2026",
     date: "2026-03-05",
-    image: "/blog/audit-10-minutes.jpg",
+    image: "/blog/claude-chatgpt-breach-lessons-2026.jpg",
     en: {
       title: "Claude and ChatGPT in the Headlines: What the Mexican Government Breach Teaches Enterprises",
       description: "In early 2026, reports described attackers using Claude and ChatGPT to breach systems and exfiltrate data. AI is now part of the attack toolkit. Here's what that means for visibility and control.",
