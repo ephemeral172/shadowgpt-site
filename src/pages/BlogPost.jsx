@@ -193,7 +193,7 @@ export default function BlogPost() {
           <div className="relative rounded-2xl overflow-hidden mb-10 aspect-[2/1] max-h-[360px] bg-gray-100 dark:bg-white/5">
             <img
               src={post.image}
-              alt=""
+              alt={content.title}
               className="w-full h-full object-cover"
             />
           </div>

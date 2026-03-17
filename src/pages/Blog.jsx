@@ -157,7 +157,7 @@ export default function Blog() {
                 <div className="sm:w-2/5 flex-shrink-0 aspect-[16/10] sm:aspect-auto sm:h-56 overflow-hidden bg-gray-100 dark:bg-white/5">
                   <img
                     src={featuredPost.image}
-                    alt=""
+                    alt={(featuredPost[l] || featuredPost.en).title}
                     className="w-full h-full object-cover group-hover:scale-[1.02] transition-transform duration-300"
                   />
                 </div>
@@ -211,7 +211,7 @@ export default function Blog() {
                       <Link to={`/Blog/${post.slug}`} className="block flex-shrink-0 w-full sm:w-48 h-32 rounded-xl overflow-hidden bg-gray-100 dark:bg-white/5 group">
                         <img
                           src={post.image}
-                          alt=""
+                          alt={(post[l] || post.en).title}
                           className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                         />
                       </Link>
