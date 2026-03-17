@@ -9,7 +9,7 @@ const PAGE_META = {
   },
   "/Terms": {
     title: "Terms of Use — ShadowGPT",
-    description: "Terms of use for ShadowGPT service. Operator: Akulov Sergey Vladimirovich. Contact page for inquiries.",
+    description: "Terms of use for ShadowGPT service. Operator: Axioma8. Contact page for inquiries.",
   },
   "/Privacy": {
     title: "Privacy Policy — ShadowGPT",
