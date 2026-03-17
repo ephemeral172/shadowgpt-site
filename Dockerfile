@@ -7,13 +7,15 @@ WORKDIR /app
 COPY package*.json ./
 RUN npm ci
 
-# Build-args для Vite (опционально; без них приложение работает без Base44)
+# Build-args для Vite (опционально; без них приложение работает без Base44 / без аналитики)
 ARG VITE_BASE44_APP_ID=
 ARG VITE_BASE44_FUNCTIONS_VERSION=
 ARG VITE_BASE44_APP_BASE_URL=
+ARG VITE_GA_MEASUREMENT_ID=
 ENV VITE_BASE44_APP_ID=$VITE_BASE44_APP_ID
 ENV VITE_BASE44_FUNCTIONS_VERSION=$VITE_BASE44_FUNCTIONS_VERSION
 ENV VITE_BASE44_APP_BASE_URL=$VITE_BASE44_APP_BASE_URL
+ENV VITE_GA_MEASUREMENT_ID=$VITE_GA_MEASUREMENT_ID
 
 COPY . .
 RUN npm run build

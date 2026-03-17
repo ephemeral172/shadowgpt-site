@@ -40,12 +40,14 @@ jobs:
         run: npm run lint --if-present
 
       # Секреты Base44 опциональны: не заданы — приложение собирается и работает без бэкенда Base44
+      # VITE_GA_MEASUREMENT_ID — переменная репозитория (Settings → Variables); не задана — аналитика отключена
       - name: Build
         run: npm run build
         env:
           VITE_BASE44_APP_ID: ${{ secrets.VITE_BASE44_APP_ID }}
           VITE_BASE44_FUNCTIONS_VERSION: ${{ secrets.VITE_BASE44_FUNCTIONS_VERSION }}
           VITE_BASE44_APP_BASE_URL: ${{ secrets.VITE_BASE44_APP_BASE_URL }}
+          VITE_GA_MEASUREMENT_ID: ${{ vars.VITE_GA_MEASUREMENT_ID }}
 
       - name: Upload dist artifact
         uses: actions/upload-artifact@v4
@@ -97,3 +99,4 @@ jobs:
             VITE_BASE44_APP_ID=${{ secrets.VITE_BASE44_APP_ID }}
             VITE_BASE44_FUNCTIONS_VERSION=${{ secrets.VITE_BASE44_FUNCTIONS_VERSION }}
             VITE_BASE44_APP_BASE_URL=${{ secrets.VITE_BASE44_APP_BASE_URL }}
+            VITE_GA_MEASUREMENT_ID=${{ vars.VITE_GA_MEASUREMENT_ID }}
