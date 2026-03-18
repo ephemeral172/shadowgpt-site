@@ -16,6 +16,7 @@ export default function FooterSection() {
               <Shield className="w-4 h-4 text-gray-600 dark:text-white/65" strokeWidth={1.5} />
             </div>
             <span className="text-sm font-light text-gray-600 dark:text-white/65">ShadowGPT</span>
+            <span className="text-[10px] font-medium uppercase tracking-wider text-amber-600 dark:text-amber-400/90">Beta</span>
           </div>
 
           <div className="flex flex-wrap items-center justify-center md:justify-end gap-6 md:gap-8">

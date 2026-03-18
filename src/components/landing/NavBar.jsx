@@ -34,6 +34,7 @@ export default function NavBar() {
             <Shield className="w-4 h-4 text-gray-700 dark:text-white/80" strokeWidth={1.5} />
           </div>
           <span className="text-sm font-light text-gray-700 dark:text-white/80 tracking-wide">ShadowGPT</span>
+          <span className="text-[10px] font-medium uppercase tracking-wider text-amber-600 dark:text-amber-400 bg-amber-500/10 dark:bg-amber-500/15 px-2 py-0.5 rounded">Beta</span>
         </div>
 
         <div className="flex items-center gap-3">

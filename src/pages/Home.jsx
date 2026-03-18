@@ -7,8 +7,9 @@ import HowItWorksSection from "../components/landing/HowItWorksSection";
 import FeaturesSection from "../components/landing/FeaturesSection";
 import ComparisonSection from "../components/landing/ComparisonSection";
 import AudienceSection from "../components/landing/AudienceSection";
-import PricingSection from "../components/landing/PricingSection";
+import ComplianceSection from "../components/landing/ComplianceSection";
 import CTASection from "../components/landing/CTASection";
+import ResourcesSection from "../components/landing/ResourcesSection";
 import FooterSection from "../components/landing/FooterSection";
 import { ThemeProvider } from "../components/landing/ThemeContext";
 
@@ -37,9 +38,11 @@ export default function Home() {
         <Divider />
         <AudienceSection />
         <Divider />
-        <PricingSection />
+        <ComplianceSection />
         <Divider />
         <CTASection />
+        <Divider />
+        <ResourcesSection />
         <FooterSection />
       </div>
     </ThemeProvider>

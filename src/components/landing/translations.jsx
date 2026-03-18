@@ -152,6 +152,15 @@ export const t = {
         { title: "Любой B2B с ПДн", range: "10–500 человек", buyer: "CEO / DPO", pain: "Штрафы по 152-ФЗ", buyerLabel: "Ответственный" },
       ],
     },
+    compliance: {
+      label: "Соответствие",
+      title1: "Соответствие",
+      title2: "требованиям",
+      desc: "Минимизация данных: мы не храним текст промптов и файлов — только метаданные и уровень риска. Видимость для аудита и отчётности. Учёт 152-ФЗ, GDPR, EU AI Act.",
+      onPrem: "Можем развернуть решение on-premise по запросу.",
+      badges: ["152-ФЗ", "GDPR", "EU AI Act"],
+      linkText: "Подробнее",
+    },
     pricing: {
       label: "Тарифы",
       title1: "Простое",
@@ -214,6 +223,14 @@ export const t = {
       title2: "отправляют в нейросети",
       desc: "Бесплатный 7-дневный аудит. Установка за 10 минут. Никаких обязательств.",
       btn: "Начать бесплатный аудит",
+    },
+    resources: {
+      label: "Ресурсы",
+      title1: "Полезные",
+      title2: "материалы",
+      cardTitle: "Чек-лист аудита Shadow AI",
+      cardDesc: "Как за 10 минут увидеть, что сотрудники отправляют в ChatGPT, Claude и другие ИИ. Пошаговая инструкция в блоге.",
+      linkText: "Читать в блоге",
     },
   },
 
@@ -370,6 +387,15 @@ export const t = {
         { title: "Any B2B with PII", range: "10–500 employees", buyer: "CEO / DPO", pain: "GDPR / regulatory fines", buyerLabel: "Decision maker" },
       ],
     },
+    compliance: {
+      label: "Compliance",
+      title1: "Compliance &",
+      title2: "regulations",
+      desc: "Data minimization: we do not store prompt text or file content — only metadata and risk level. Full visibility for audit and reporting. Aligned with GDPR and EU AI Act.",
+      onPrem: "We can deploy an on-premises solution on request.",
+      badges: ["GDPR", "EU AI Act"],
+      linkText: "Learn more",
+    },
     pricing: {
       label: "Pricing",
       title1: "Simple",
@@ -432,6 +458,14 @@ export const t = {
       title2: "are sending to AI services",
       desc: "Free 7-day audit. Setup in 10 minutes. No commitment.",
       btn: "Start free audit",
+    },
+    resources: {
+      label: "Resources",
+      title1: "Useful",
+      title2: "resources",
+      cardTitle: "Shadow AI audit checklist",
+      cardDesc: "How to see in 10 minutes what employees send to ChatGPT, Claude, and other AI. Step-by-step guide in the blog.",
+      linkText: "Read on the blog",
     },
   },
 
@@ -508,6 +542,15 @@ export const t = {
         { title: "개인정보 취급 B2B", range: "10–500명", buyer: "CEO / DPO", pain: "GDPR 등 규제 과태료", buyerLabel: "결정권자" },
       ],
     },
+    compliance: {
+      label: "규정 준수",
+      title1: "규정",
+      title2: "준수",
+      desc: "데이터 최소화: 프롬프트·파일 내용을 저장하지 않으며, 메타데이터와 위험 수준만 처리합니다. 감사 및 보고를 위한 가시성. GDPR, EU AI Act 대응.",
+      onPrem: "요청 시 온프레미스 배포 가능합니다.",
+      badges: ["GDPR", "EU AI Act"],
+      linkText: "자세히 보기",
+    },
     pricing: {
       label: "요금",
       title1: "간단한",
@@ -529,6 +572,14 @@ export const t = {
       title2: "무엇을 보내는지 확인하세요",
       desc: "7일 무료 감사. 10분 설치. 약정 없음.",
       btn: "무료 감사 시작",
+    },
+    resources: {
+      label: "리소스",
+      title1: "유용한",
+      title2: "자료",
+      cardTitle: "Shadow AI 감사 체크리스트",
+      cardDesc: "10분 만에 직원이 ChatGPT, Claude 등에 무엇을 보내는지 확인하는 방법. 블로그 가이드.",
+      linkText: "블로그에서 읽기",
     },
   },
 
@@ -605,6 +656,15 @@ export const t = {
         { title: "Cualquier B2B con datos personales", range: "10–500 empleados", buyer: "CEO / DPO", pain: "Multas GDPR / normativa", buyerLabel: "Decisor" },
       ],
     },
+    compliance: {
+      label: "Cumplimiento",
+      title1: "Cumplimiento y",
+      title2: "regulación",
+      desc: "Minimización de datos: no almacenamos el texto de prompts ni el contenido de archivos, solo metadatos y nivel de riesgo. Visibilidad para auditoría e informes. Alineado con GDPR y EU AI Act.",
+      onPrem: "Podemos desplegar una solución on-premise bajo petición.",
+      badges: ["GDPR", "EU AI Act"],
+      linkText: "Saber más",
+    },
     pricing: {
       label: "Precios",
       title1: "Precios",
@@ -626,6 +686,14 @@ export const t = {
       title2: "a los servicios de IA",
       desc: "Auditoría gratuita de 7 días. Instalación en 10 minutos. Sin compromiso.",
       btn: "Iniciar auditoría gratuita",
+    },
+    resources: {
+      label: "Recursos",
+      title1: "Materiales",
+      title2: "útiles",
+      cardTitle: "Lista de verificación: auditoría Shadow AI",
+      cardDesc: "Cómo ver en 10 minutos qué envían los empleados a ChatGPT, Claude y otras IA. Guía paso a paso en el blog.",
+      linkText: "Leer en el blog",
     },
   },
 };
