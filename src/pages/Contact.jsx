@@ -33,7 +33,7 @@ export default function Contact() {
           <Link to="/" className="glass rounded-lg p-2 inline-flex">
             <Shield className="w-4 h-4 text-gray-600 dark:text-white/65" strokeWidth={1.5} />
           </Link>
-          <Link to="/" className="text-sm font-light text-gray-600 dark:text-white/65 hover:text-gray-800 dark:hover:text-white/80">
+          <Link to="/" className="link-hover text-sm font-light text-gray-600 dark:text-white/65">
             {t.back}
           </Link>
           <h1 className="text-xl font-light tracking-tight text-gray-800 dark:text-white/80 ml-2">

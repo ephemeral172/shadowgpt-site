@@ -84,7 +84,7 @@ export default function Blog() {
           <Link to="/" className="glass rounded-lg p-2 inline-flex">
             <Shield className="w-4 h-4 text-gray-600 dark:text-white/65" strokeWidth={1.5} />
           </Link>
-          <Link to="/" className="text-sm font-light text-gray-600 dark:text-white/65 hover:text-gray-800 dark:hover:text-white/85">
+          <Link to="/" className="link-hover text-sm font-light text-gray-600 dark:text-white/65">
             {t.back}
           </Link>
         </div>
@@ -233,7 +233,7 @@ export default function Blog() {
                           </span>
                         </div>
                         <h2 className="text-xl font-light text-gray-900 dark:text-white mb-2">
-                          <Link to={`/Blog/${post.slug}`} className="hover:underline">
+                          <Link to={`/Blog/${post.slug}`} className="link-hover hover:underline">
                             {content.title}
                           </Link>
                         </h2>
@@ -242,7 +242,7 @@ export default function Blog() {
                         </p>
                         <Link
                           to={`/Blog/${post.slug}`}
-                          className="text-sm font-light text-gray-700 dark:text-white/85 underline hover:no-underline inline-flex items-center gap-1"
+                          className="link-hover text-sm font-light text-gray-700 dark:text-white/85 underline hover:no-underline inline-flex items-center gap-1"
                         >
                           {t.readMore}
                           <ArrowRight className="w-3.5 h-3.5" strokeWidth={1.5} />

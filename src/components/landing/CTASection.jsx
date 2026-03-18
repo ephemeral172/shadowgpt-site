@@ -11,7 +11,7 @@ export default function CTASection() {
   const isDark = theme === "dark";
 
   return (
-    <section className="relative py-32 px-6">
+    <section className="relative section-landing">
       <div className="max-w-4xl mx-auto text-center">
         <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
           <motion.div
@@ -37,7 +37,7 @@ export default function CTASection() {
             <Shield className="w-8 h-8 text-gray-600 dark:text-white/60" strokeWidth={1.2} />
           </div>
 
-          <h2 className="text-3xl md:text-5xl font-extralight tracking-tight mb-6 text-gray-900 dark:text-white">
+          <h2 className="font-heading text-3xl md:text-5xl font-extralight tracking-tight mb-6 text-gray-900 dark:text-white">
             {tx.title1}
             <br />
             <span className="font-semibold">{tx.title2}</span>
@@ -52,7 +52,7 @@ export default function CTASection() {
               rel="noopener noreferrer"
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
-              className="glass-highlight hover:bg-gray-200/80 dark:hover:bg-white/10 transition-all duration-500 rounded-full px-10 py-4 text-sm tracking-wide text-gray-900 dark:text-white/90 font-light flex items-center gap-3 group"
+              className="btn-cta-primary glass-highlight hover:bg-gray-200/80 dark:hover:bg-white/10 transition-all duration-500 rounded-full px-10 py-4 text-sm tracking-wide text-gray-900 dark:text-white/90 font-light flex items-center gap-3 group border"
             >
               {tx.btn}
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />

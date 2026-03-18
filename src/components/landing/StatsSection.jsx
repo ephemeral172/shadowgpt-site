@@ -41,7 +41,7 @@ export default function StatsSection() {
   const tx = t[lang].stats;
 
   return (
-    <section id="learn-more" className="relative py-32 px-6">
+    <section id="learn-more" className="relative section-landing">
       <div className="max-w-6xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -51,7 +51,7 @@ export default function StatsSection() {
           className="text-center mb-20"
         >
           <span className="text-xs tracking-[0.3em] uppercase text-gray-500 dark:text-white/55 font-light">{tx.label}</span>
-          <h2 className="text-3xl md:text-5xl font-extralight mt-4 tracking-tight text-gray-900 dark:text-white">
+          <h2 className="font-heading text-3xl md:text-5xl font-extralight mt-4 tracking-tight text-gray-900 dark:text-white">
             {tx.title1} <span className="font-semibold">{tx.title2}</span>
           </h2>
           {tx.whatIs && (
@@ -100,7 +100,7 @@ export default function StatsSection() {
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: 0.05 * i }}
-                className="glass rounded-full px-4 py-2 text-xs text-gray-600 dark:text-white/75 font-light hover:text-gray-800 dark:hover:text-white/90 hover:bg-gray-100 dark:hover:bg-white/5 transition-all duration-300 cursor-default"
+                className="btn-glass glass rounded-full px-4 py-2 text-xs text-gray-600 dark:text-white/75 font-light cursor-default"
               >
                 {item}
               </motion.span>

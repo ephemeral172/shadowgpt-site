@@ -106,6 +106,7 @@
 .glass-card {
   background: rgba(0, 0, 0, 0.02);
   border: 1px solid rgba(0, 0, 0, 0.07);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
   position: relative;
 }
 
@@ -117,6 +118,7 @@
 .glass-card:hover {
   background: rgba(0, 0, 0, 0.04);
   border-color: rgba(0, 0, 0, 0.12);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
 }
 
 /* Dark theme overrides */
@@ -138,11 +140,80 @@
 .dark .glass-card {
   background: rgba(255, 255, 255, 0.03);
   border: 1px solid rgba(255, 255, 255, 0.07);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
 }
 
 .dark .glass-card:hover {
   background: rgba(255, 255, 255, 0.06);
   border-color: rgba(255, 255, 255, 0.12);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25), 0 0 0 1px rgba(255, 255, 255, 0.04);
+}
+
+/* Main CTA button hover accent */
+.btn-cta-primary {
+  transition: box-shadow 0.25s ease, border-color 0.25s ease;
+}
+.btn-cta-primary:hover {
+  box-shadow: 0 0 0 1px rgba(245, 158, 11, 0.35), 0 2px 8px rgba(245, 158, 11, 0.08);
+  border-color: rgba(245, 158, 11, 0.4);
+}
+.dark .btn-cta-primary:hover {
+  box-shadow: 0 0 0 1px rgba(251, 191, 36, 0.25), 0 2px 12px rgba(251, 191, 36, 0.06);
+  border-color: rgba(251, 191, 36, 0.3);
+}
+
+/* Section rhythm — единые отступы секций лендинга */
+.section-landing {
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+/* Второй вариант разделителя (перед CTA): лёгкий акцент */
+.section-divider-accent {
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(212, 212, 212, 0.6) 15%,
+    rgba(245, 158, 11, 0.25) 50%,
+    rgba(212, 212, 212, 0.6) 85%,
+    transparent 100%
+  );
+}
+.dark .section-divider-accent {
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.06) 15%,
+    rgba(251, 191, 36, 0.2) 50%,
+    rgba(255, 255, 255, 0.06) 85%,
+    transparent 100%
+  );
+}
+
+/* Микровзаимодействия: унифицированный hover для ссылок и кнопок */
+.link-hover {
+  transition: color 0.2s ease;
+}
+.link-hover:hover {
+  color: rgb(31 41 55);
+}
+.dark .link-hover:hover {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.btn-glass {
+  transition: background-color 0.25s ease, color 0.25s ease, box-shadow 0.25s ease;
+}
+.btn-glass:hover {
+  background-color: rgba(0, 0, 0, 0.06);
+  color: rgb(31 41 55);
+}
+.dark .btn-glass:hover {
+  background-color: rgba(255, 255, 255, 0.06);
+  color: rgba(255, 255, 255, 0.9);
 }
 
 /* Liquid orb animations */

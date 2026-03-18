@@ -13,9 +13,12 @@ import ResourcesSection from "../components/landing/ResourcesSection";
 import FooterSection from "../components/landing/FooterSection";
 import { ThemeProvider } from "../components/landing/ThemeContext";
 
-const Divider = () => (
+const Divider = ({ variant }) => (
   <div className="max-w-xl mx-auto px-6">
-    <div className="h-px bg-gradient-to-r from-transparent via-gray-300 dark:via-white/10 to-transparent" />
+    <div
+      className={variant === "accent" ? "section-divider-accent" : "h-px bg-gradient-to-r from-transparent via-gray-300 dark:via-white/10 to-transparent"}
+      role="presentation"
+    />
   </div>
 );
 
@@ -39,7 +42,7 @@ export default function Home() {
         <AudienceSection />
         <Divider />
         <ComplianceSection />
-        <Divider />
+        <Divider variant="accent" />
         <CTASection />
         <Divider />
         <ResourcesSection />

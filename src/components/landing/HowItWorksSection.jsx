@@ -22,7 +22,7 @@ export default function HowItWorksSection() {
   }, []);
 
   return (
-    <section className="relative py-32 px-6 overflow-hidden">
+    <section className="relative section-landing overflow-hidden">
       <div
         className="absolute inset-0 opacity-[0.03] pointer-events-none"
         style={{
@@ -42,7 +42,7 @@ export default function HowItWorksSection() {
           className="text-center mb-20"
         >
           <span className="text-xs tracking-[0.3em] uppercase text-gray-500 dark:text-white/55 font-light">{tx.label}</span>
-          <h2 className="text-3xl md:text-5xl font-extralight mt-4 tracking-tight text-gray-900 dark:text-white">
+          <h2 className="font-heading text-3xl md:text-5xl font-extralight mt-4 tracking-tight text-gray-900 dark:text-white">
             {tx.title1} <span className="font-semibold">{tx.title2}</span>
           </h2>
         </motion.div>

@@ -120,7 +120,7 @@ export default function Integrations() {
           <Link to="/" className="glass rounded-lg p-2 inline-flex">
             <Shield className="w-4 h-4 text-gray-600 dark:text-white/65" strokeWidth={1.5} />
           </Link>
-          <Link to="/" className="text-sm font-light text-gray-600 dark:text-white/65 hover:text-gray-800 dark:hover:text-white/80">
+          <Link to="/" className="link-hover text-sm font-light text-gray-600 dark:text-white/65">
             {t.back}
           </Link>
         </div>
@@ -139,9 +139,9 @@ export default function Integrations() {
         </div>
 
         <p className="mt-12 pt-8 border-t border-gray-200 dark:border-white/5 text-sm text-gray-600 dark:text-white/55 space-x-4">
-          <Link to="/Help" className="underline hover:text-gray-800 dark:hover:text-white/80">{t.help}</Link>
-          <Link to="/Terms" className="underline hover:text-gray-800 dark:hover:text-white/80">{t.terms}</Link>
-          <Link to="/Privacy" className="underline hover:text-gray-800 dark:hover:text-white/80">{t.privacy}</Link>
+          <Link to="/Help" className="link-hover underline">{t.help}</Link>
+          <Link to="/Terms" className="link-hover underline">{t.terms}</Link>
+          <Link to="/Privacy" className="link-hover underline">{t.privacy}</Link>
         </p>
       </div>
     </div>

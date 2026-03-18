@@ -174,7 +174,7 @@ export default function Status() {
       <div className="min-h-screen bg-gray-50/80 dark:bg-[#050505] text-gray-900 dark:text-white px-4 py-10 flex items-center justify-center">
         <div className="max-w-md text-center">
           <p className="text-gray-600 dark:text-white/70 font-light mb-4">{t.error}</p>
-          <Link to="/" className="text-sm underline text-gray-600 dark:text-white/60 hover:text-gray-800 dark:hover:text-white/80">
+          <Link to="/" className="link-hover text-sm underline text-gray-600 dark:text-white/60">
             {t.back}
           </Link>
         </div>
@@ -321,7 +321,7 @@ export default function Status() {
         </div>
 
         <p className="mt-8 text-center text-xs text-gray-500 dark:text-white/50 font-light">
-          <Link to="/" className="underline hover:text-gray-700 dark:hover:text-white/70">
+          <Link to="/" className="link-hover underline">
             {t.back}
           </Link>
         </p>

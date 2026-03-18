@@ -167,11 +167,11 @@ export default function BlogPost() {
           <Link to="/" className="glass rounded-lg p-2 inline-flex">
             <Shield className="w-4 h-4 text-gray-600 dark:text-white/65" strokeWidth={1.5} />
           </Link>
-          <Link to="/" className="text-sm font-light text-gray-600 dark:text-white/65 hover:text-gray-800 dark:hover:text-white/85">
+          <Link to="/" className="link-hover text-sm font-light text-gray-600 dark:text-white/65">
             {t.back}
           </Link>
           <span className="text-gray-400 dark:text-white/40">/</span>
-          <Link to="/Blog" className="text-sm font-light text-gray-600 dark:text-white/65 hover:text-gray-800 dark:hover:text-white/85">
+          <Link to="/Blog" className="link-hover text-sm font-light text-gray-600 dark:text-white/65">
             {t.blog}
           </Link>
         </div>
@@ -231,7 +231,7 @@ export default function BlogPost() {
         </article>
 
         <p className="mt-12 pt-8 border-t border-gray-200 dark:border-white/10">
-          <Link to="/Blog" className="text-sm text-gray-600 dark:text-white/65 hover:text-gray-800 dark:hover:text-white/85 underline">
+          <Link to="/Blog" className="link-hover text-sm text-gray-600 dark:text-white/65 underline">
             ← {t.blog}
           </Link>
         </p>

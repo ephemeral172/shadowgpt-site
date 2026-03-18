@@ -10,7 +10,7 @@ export default function PricingSection() {
   const tx = t[lang].pricing;
 
   return (
-    <section className="relative py-32 px-6">
+    <section className="relative section-landing">
       <div className="max-w-5xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -20,7 +20,7 @@ export default function PricingSection() {
           className="text-center mb-20"
         >
           <span className="text-xs tracking-[0.3em] uppercase text-gray-500 dark:text-white/55 font-light">{tx.label}</span>
-          <h2 className="text-3xl md:text-5xl font-extralight mt-4 tracking-tight text-gray-900 dark:text-white">
+          <h2 className="font-heading text-3xl md:text-5xl font-extralight mt-4 tracking-tight text-gray-900 dark:text-white">
             {tx.title1} <span className="font-semibold">{tx.title2}</span>
           </h2>
           <p className="text-gray-700 dark:text-white/80 mt-4 max-w-md mx-auto font-light text-sm">{tx.desc}</p>
@@ -74,8 +74,8 @@ export default function PricingSection() {
                   ))}
                 </div>
 
-                <a href="https://console.shadowgpt.app/login" target="_blank" rel="noopener noreferrer" className={`w-full mt-8 rounded-full py-3 text-sm font-light tracking-wide transition-all duration-500 block text-center ${
-                  plan.popular ? "bg-gray-200/80 dark:bg-white/10 text-gray-900 dark:text-white/80 hover:bg-gray-300/80 dark:hover:bg-white/15" : "glass hover:bg-gray-100 dark:hover:bg-white/5 text-gray-700 dark:text-white/70"
+                <a href="https://console.shadowgpt.app/login" target="_blank" rel="noopener noreferrer" className={`w-full mt-8 rounded-full py-3 text-sm font-light tracking-wide block text-center transition-[background-color,color] duration-250 ${
+                  plan.popular ? "bg-gray-200/80 dark:bg-white/10 text-gray-900 dark:text-white/80 hover:bg-gray-300/80 dark:hover:bg-white/15" : "btn-glass glass text-gray-700 dark:text-white/70"
                 }`}>
                   {tx.cta}
                 </a>

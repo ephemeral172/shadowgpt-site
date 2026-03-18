@@ -122,7 +122,7 @@ export default function Privacy() {
           <Link to="/" className="glass rounded-lg p-2 inline-flex">
             <Shield className="w-4 h-4 text-gray-600 dark:text-white/65" strokeWidth={1.5} />
           </Link>
-          <Link to="/" className="text-sm font-light text-gray-600 dark:text-white/65 hover:text-gray-800 dark:hover:text-white/80">
+          <Link to="/" className="link-hover text-sm font-light text-gray-600 dark:text-white/65">
             {t.back}
           </Link>
         </div>
@@ -141,7 +141,7 @@ export default function Privacy() {
         </div>
 
         <p className="mt-12 pt-8 border-t border-gray-200 dark:border-white/5 text-sm text-gray-600 dark:text-white/55">
-          <Link to="/Terms" className="underline hover:text-gray-700 dark:hover:text-white/50">{t.terms}</Link>
+          <Link to="/Terms" className="link-hover underline">{t.terms}</Link>
         </p>
       </div>
     </div>

@@ -67,10 +67,10 @@ export default function NavBar() {
             {t[displayLang].footer.blog}
           </Link>
 
-          <a href="https://console.shadowgpt.app/login" target="_blank" rel="noopener noreferrer" className="text-xs tracking-wide text-gray-600 dark:text-white/65 hover:text-gray-800 dark:hover:text-white/85 font-light transition-colors">
+          <a href="https://console.shadowgpt.app/login" target="_blank" rel="noopener noreferrer" className="link-hover text-xs tracking-wide text-gray-600 dark:text-white/65 font-light">
             {t[displayLang].nav.login}
           </a>
-          <a href="https://console.shadowgpt.app/login" target="_blank" rel="noopener noreferrer" className="glass hover:bg-gray-100 dark:hover:bg-white/5 transition-all duration-300 rounded-full px-5 py-2 text-xs tracking-wide text-gray-700 dark:text-white/75 font-light">
+          <a href="https://console.shadowgpt.app/login" target="_blank" rel="noopener noreferrer" className="btn-cta-primary btn-glass glass border rounded-full px-5 py-2 text-xs tracking-wide text-gray-700 dark:text-white/75 font-light">
             {t[displayLang].nav.cta}
           </a>
         </div>

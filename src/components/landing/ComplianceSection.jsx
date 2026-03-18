@@ -9,7 +9,7 @@ export default function ComplianceSection() {
   const tx = t[lang].compliance;
 
   return (
-    <section className="relative py-32 px-6">
+    <section className="relative section-landing">
       <div className="max-w-4xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -19,7 +19,7 @@ export default function ComplianceSection() {
           className="text-center mb-12"
         >
           <span className="text-xs tracking-[0.3em] uppercase text-gray-500 dark:text-white/55 font-light">{tx.label}</span>
-          <h2 className="text-3xl md:text-5xl font-extralight mt-4 tracking-tight text-gray-900 dark:text-white">
+          <h2 className="font-heading text-3xl md:text-5xl font-extralight mt-4 tracking-tight text-gray-900 dark:text-white">
             {tx.title1} <span className="font-semibold">{tx.title2}</span>
           </h2>
         </motion.div>
@@ -51,7 +51,7 @@ export default function ComplianceSection() {
           </div>
           <Link
             to="/Security"
-            className="inline-flex items-center gap-2 text-sm font-light text-gray-700 dark:text-white/80 hover:text-gray-900 dark:hover:text-white transition-colors group"
+            className="link-hover inline-flex items-center gap-2 text-sm font-light text-gray-700 dark:text-white/80 group"
           >
             <ShieldCheck className="w-4 h-4" strokeWidth={1.5} />
             {tx.linkText}

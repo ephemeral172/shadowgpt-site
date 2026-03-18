@@ -20,16 +20,16 @@ export default function FooterSection() {
           </div>
 
           <div className="flex flex-wrap items-center justify-center md:justify-end gap-6 md:gap-8">
-            <a href="https://console.shadowgpt.app/login" target="_blank" rel="noopener noreferrer" className="text-xs text-gray-600 dark:text-white/65 font-light hover:text-gray-700 dark:hover:text-white/75">{footer.login}</a>
-            <Link to="/FAQ" className="text-xs text-gray-600 dark:text-white/65 font-light hover:text-gray-700 dark:hover:text-white/75">{footer.faq}</Link>
-            <Link to="/Help" className="text-xs text-gray-600 dark:text-white/65 font-light hover:text-gray-700 dark:hover:text-white/75">{footer.help}</Link>
-            <Link to="/Security" className="text-xs text-gray-600 dark:text-white/65 font-light hover:text-gray-700 dark:hover:text-white/75">{footer.security}</Link>
-            <Link to="/Integrations" className="text-xs text-gray-600 dark:text-white/65 font-light hover:text-gray-700 dark:hover:text-white/75">{footer.integrations}</Link>
-            <Link to="/Contact" className="text-xs text-gray-600 dark:text-white/65 font-light hover:text-gray-700 dark:hover:text-white/75">{footer.contact}</Link>
-            <Link to="/Status" className="text-xs text-gray-600 dark:text-white/65 font-light hover:text-gray-700 dark:hover:text-white/75">{footer.status}</Link>
-            <Link to="/Blog" className="text-xs text-gray-600 dark:text-white/65 font-light hover:text-gray-700 dark:hover:text-white/75">{footer.blog}</Link>
-            <Link to="/Terms" className="text-xs text-gray-600 dark:text-white/65 font-light hover:text-gray-700 dark:hover:text-white/75">{footer.terms}</Link>
-            <Link to="/Privacy" className="text-xs text-gray-600 dark:text-white/65 font-light hover:text-gray-700 dark:hover:text-white/75">{footer.privacy}</Link>
+            <a href="https://console.shadowgpt.app/login" target="_blank" rel="noopener noreferrer" className="link-hover text-xs text-gray-600 dark:text-white/65 font-light">{footer.login}</a>
+            <Link to="/FAQ" className="link-hover text-xs text-gray-600 dark:text-white/65 font-light">{footer.faq}</Link>
+            <Link to="/Help" className="link-hover text-xs text-gray-600 dark:text-white/65 font-light">{footer.help}</Link>
+            <Link to="/Security" className="link-hover text-xs text-gray-600 dark:text-white/65 font-light">{footer.security}</Link>
+            <Link to="/Integrations" className="link-hover text-xs text-gray-600 dark:text-white/65 font-light">{footer.integrations}</Link>
+            <Link to="/Contact" className="link-hover text-xs text-gray-600 dark:text-white/65 font-light">{footer.contact}</Link>
+            <Link to="/Status" className="link-hover text-xs text-gray-600 dark:text-white/65 font-light">{footer.status}</Link>
+            <Link to="/Blog" className="link-hover text-xs text-gray-600 dark:text-white/65 font-light">{footer.blog}</Link>
+            <Link to="/Terms" className="link-hover text-xs text-gray-600 dark:text-white/65 font-light">{footer.terms}</Link>
+            <Link to="/Privacy" className="link-hover text-xs text-gray-600 dark:text-white/65 font-light">{footer.privacy}</Link>
             <span className="text-xs text-gray-600 dark:text-white/65 font-light">{footer.poweredBy}</span>
           </div>
         </div>

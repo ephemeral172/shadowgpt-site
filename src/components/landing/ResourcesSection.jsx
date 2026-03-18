@@ -11,7 +11,7 @@ export default function ResourcesSection() {
   const tx = t[lang].resources;
 
   return (
-    <section className="relative py-24 px-6">
+    <section className="relative section-landing">
       <div className="max-w-4xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -21,7 +21,7 @@ export default function ResourcesSection() {
           className="text-center mb-12"
         >
           <span className="text-xs tracking-[0.3em] uppercase text-gray-500 dark:text-white/55 font-light">{tx.label}</span>
-          <h2 className="text-3xl md:text-4xl font-extralight mt-4 tracking-tight text-gray-900 dark:text-white">
+          <h2 className="font-heading text-3xl md:text-4xl font-extralight mt-4 tracking-tight text-gray-900 dark:text-white">
             {tx.title1} <span className="font-semibold">{tx.title2}</span>
           </h2>
         </motion.div>
@@ -48,7 +48,7 @@ export default function ResourcesSection() {
                   {tx.cardDesc}
                 </p>
               </div>
-              <span className="inline-flex items-center gap-2 text-sm font-light text-gray-600 dark:text-white/65 group-hover:text-gray-900 dark:group-hover:text-white transition-colors flex-shrink-0">
+              <span className="link-hover inline-flex items-center gap-2 text-sm font-light text-gray-600 dark:text-white/65 group-hover:text-gray-900 dark:group-hover:text-white flex-shrink-0">
                 {tx.linkText}
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" strokeWidth={1.5} />
               </span>

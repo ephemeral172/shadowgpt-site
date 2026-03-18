@@ -91,7 +91,7 @@ export default function HeroSection() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.6 }}
-          className="text-5xl md:text-7xl lg:text-8xl font-extralight tracking-tight mb-6"
+          className="font-heading text-5xl md:text-7xl lg:text-8xl font-extralight tracking-tight mb-6"
         >
           <span className="shimmer-text">Shadow</span>
           <span className="font-bold text-gray-900 dark:text-white">GPT</span>
@@ -133,13 +133,13 @@ export default function HeroSection() {
           transition={{ duration: 1, delay: 1.2 }}
           className="flex flex-col sm:flex-row items-center justify-center gap-4"
         >
-          <a href="https://console.shadowgpt.app/login" target="_blank" rel="noopener noreferrer" className="glass-highlight hover:bg-gray-200/80 dark:hover:bg-white/10 transition-all duration-500 rounded-full px-8 py-3.5 text-sm tracking-wide text-gray-900 dark:text-white/90 font-light">
+          <a href="https://console.shadowgpt.app/login" target="_blank" rel="noopener noreferrer" className="btn-cta-primary glass-highlight hover:bg-gray-200/80 dark:hover:bg-white/10 transition-all duration-500 rounded-full px-8 py-3.5 text-sm tracking-wide text-gray-900 dark:text-white/90 font-light border">
             {tx.cta1}
           </a>
           <button
             type="button"
             onClick={() => document.getElementById("learn-more")?.scrollIntoView({ behavior: "smooth" })}
-            className="glass hover:bg-gray-100 dark:hover:bg-white/5 transition-all duration-500 rounded-full px-8 py-3.5 text-sm tracking-wide text-gray-700 dark:text-white/80 font-light"
+            className="btn-glass glass rounded-full px-8 py-3.5 text-sm tracking-wide text-gray-700 dark:text-white/80 font-light"
           >
             {tx.cta2}
           </button>
