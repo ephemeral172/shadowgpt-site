@@ -10,11 +10,11 @@ const content = {
     sections: [
       {
         title: "1. Принцип минимальных данных",
-        body: "ShadowGPT не хранит текст промптов, содержимое вложений (PDF, DOCX, код, изображения) и иные конфиденциальные данные пользователей. В облаке обрабатываются и хранятся только метаданные событий (источник, время, уровень риска, идентификатор пользователя/устройства) и результаты классификации рисков, необходимые для дашборда, отчётов и уведомлений.",
+        body: "ShadowGPT не хранит текст промптов, содержимое вложений (PDF, DOCX, код, изображения) и иные конфиденциальные данные пользователей. В облаке обрабатываются и хранятся только метаданные событий (источник, время, уровень риска, идентификатор пользователя/устройства) и результаты классификации рисков, необходимые для дашборда, отчётов и уведомлений. Организация (администратор) сама решает, где выполнять анализ: локально в расширении или на сервере; при серверном режиме обработка и при необходимости хранение выполняются на нашей стороне.",
       },
       {
         title: "2. Данные, которые мы обрабатываем",
-        body: "При использовании расширения и дашборда мы можем обрабатывать: данные учётной записи (email, имя организации); метаданные событий мониторинга (какой сервис, время, уровень риска, тип контента по классификации); технические данные (IP, User-Agent, идентификаторы для привязки расширения к организации). Извлечение признаков из текста и файлов выполняется локально в расширении; на сервер не передаётся содержимое промптов и файлов.",
+        body: "При использовании расширения и дашборда мы можем обрабатывать: данные учётной записи (email, имя организации); метаданные событий мониторинга (какой сервис, время, уровень риска, тип контента по классификации); технические данные (IP, User-Agent, идентификаторы для привязки расширения к организации). Организация (администратор) выбирает режим: при локальном — содержимое промптов и файлов на сервер не передаётся; при серверном контент может передаваться для классификации на нашей стороне.",
       },
       {
         title: "3. Цели обработки",
@@ -47,11 +47,11 @@ const content = {
     sections: [
       {
         title: "1. Minimal data principle",
-        body: "ShadowGPT does not store prompt text, attachment content (PDF, DOCX, code, images), or other confidential user data. Only event metadata (source, time, risk level, user/device identifier) and risk classification results are processed and stored in the cloud, as needed for the dashboard, reports, and notifications.",
+        body: "ShadowGPT does not store prompt text, attachment content (PDF, DOCX, code, images), or other confidential user data. Only event metadata (source, time, risk level, user/device identifier) and risk classification results are processed and stored in the cloud, as needed for the dashboard, reports, and notifications. The organization (admin) decides where analysis runs: locally in the extension or on the server; in server mode, processing and storage may be performed on our side.",
       },
       {
         title: "2. Data we process",
-        body: "When you use the extension and dashboard we may process: account data (email, organization name); monitoring event metadata (which service, time, risk level, content type from classification); technical data (IP, User-Agent, identifiers linking the extension to the organization). Feature extraction from text and files is done locally in the extension; prompt and file content is not sent to the server.",
+        body: "When you use the extension and dashboard we may process: account data (email, organization name); monitoring event metadata (which service, time, risk level, content type from classification); technical data (IP, User-Agent, identifiers linking the extension to the organization). The organization (admin) chooses the mode: in local mode, prompt and file content is not sent to the server; in server mode, content may be sent for classification on our side.",
       },
       {
         title: "3. Purposes",
@@ -82,8 +82,8 @@ const content = {
     updated: "최종 업데이트: 2026",
     intro: "당사는 귀하의 데이터 내용을 저장하지 않습니다. 아래에서 어떤 데이터를 처리하고 그 이유를 설명합니다.",
     sections: [
-      { title: "1. 최소 데이터 원칙", body: "ShadowGPT는 프롬프트 텍스트, 첨부 파일 내용(PDF, DOCX, 코드, 이미지) 또는 기타 기밀 사용자 데이터를 저장하지 않습니다. 클라우드에서는 대시보드, 보고서 및 알림에 필요한 이벤트 메타데이터(출처, 시간, 위험 수준, 사용자/기기 식별자)와 위험 분류 결과만 처리 및 저장합니다." },
-      { title: "2. 처리하는 데이터", body: "확장 프로그램 및 대시보드 사용 시 계정 데이터(이메일, 조직명), 모니터링 이벤트 메타데이터(서비스, 시간, 위험 수준, 분류별 콘텐츠 유형), 기술 데이터(IP, User-Agent, 확장 프로그램과 조직 연결 식별자)를 처리할 수 있습니다. 텍스트 및 파일의 특징 추출은 확장 프로그램에서 로컬로 수행되며, 프롬프트 및 파일 내용은 서버로 전송되지 않습니다." },
+      { title: "1. 최소 데이터 원칙", body: "ShadowGPT는 프롬프트 텍스트, 첨부 파일 내용(PDF, DOCX, 코드, 이미지) 또는 기타 기밀 사용자 데이터를 저장하지 않습니다. 클라우드에서는 대시보드, 보고서 및 알림에 필요한 이벤트 메타데이터(출처, 시간, 위험 수준, 사용자/기기 식별자)와 위험 분류 결과만 처리 및 저장합니다. 조직(관리자)이 분석 방식을 선택합니다: 확장 프로그램에서 로컬로 또는 서버에서; 서버 모드에서는 당사 측에서 처리 및 저장이 이루어질 수 있습니다." },
+      { title: "2. 처리하는 데이터", body: "확장 프로그램 및 대시보드 사용 시 계정 데이터(이메일, 조직명), 모니터링 이벤트 메타데이터(서비스, 시간, 위험 수준, 분류별 콘텐츠 유형), 기술 데이터(IP, User-Agent, 확장 프로그램과 조직 연결 식별자)를 처리할 수 있습니다. 조직(관리자)이 모드를 선택합니다: 로컬 모드에서는 프롬프트 및 파일 내용이 서버로 전송되지 않으며, 서버 모드에서는 분류를 위해 당사로 전송될 수 있습니다." },
       { title: "3. 처리 목적", body: "서비스 제공(대시보드, 알림, 보고서), 결제, 분류 및 제품 품질 개선, 법적 준수." },
       { title: "4. 법적 근거 및 보관", body: "처리는 계약(서비스 이용), 필요한 경우 동의, 정당한 이익에 기반합니다. 이벤트 메타데이터는 서비스 및 보고에 필요한 기간 동안, 계정 데이터는 계정 삭제 또는 동의 철회 시까지 보관하며 법적 요건을 따릅니다." },
       { title: "5. 데이터 공유", body: "데이터는 서비스 제공에 필요한 범위와 의무로만 클라우드 및 서비스 제공자(호스팅, 익명화된 분석)와 공유될 수 있습니다. 개인정보를 판매하지 않습니다." },
@@ -98,8 +98,8 @@ const content = {
     updated: "Última actualización: 2026",
     intro: "No almacenamos el contenido de sus datos. A continuación describimos qué datos procesamos y por qué.",
     sections: [
-      { title: "1. Principio de datos mínimos", body: "ShadowGPT no almacena texto de prompts, contenido de adjuntos (PDF, DOCX, código, imágenes) ni otros datos confidenciales de usuarios. Solo se procesan y almacenan en la nube metadatos de eventos (origen, hora, nivel de riesgo, identificador de usuario/dispositivo) y resultados de clasificación de riesgo, según lo necesario para el panel, informes y notificaciones." },
-      { title: "2. Datos que procesamos", body: "Al usar la extensión y el panel podemos procesar: datos de cuenta (email, nombre de organización); metadatos de eventos (servicio, hora, nivel de riesgo, tipo de contenido); datos técnicos (IP, User-Agent, identificadores). La extracción de características se hace localmente en la extensión; el contenido de prompts y archivos no se envía al servidor." },
+      { title: "1. Principio de datos mínimos", body: "ShadowGPT no almacena texto de prompts, contenido de adjuntos (PDF, DOCX, código, imágenes) ni otros datos confidenciales de usuarios. Solo se procesan y almacenan en la nube metadatos de eventos (origen, hora, nivel de riesgo, identificador de usuario/dispositivo) y resultados de clasificación de riesgo, según lo necesario para el panel, informes y notificaciones. La organización (el administrador) decide dónde se ejecuta el análisis: localmente en la extensión o en el servidor; en modo servidor el procesamiento y el almacenamiento pueden realizarse en nuestro lado." },
+      { title: "2. Datos que procesamos", body: "Al usar la extensión y el panel podemos procesar: datos de cuenta (email, nombre de organización); metadatos de eventos (servicio, hora, nivel de riesgo, tipo de contenido); datos técnicos (IP, User-Agent, identificadores). La organización (el administrador) elige el modo: en modo local el contenido de prompts y archivos no se envía al servidor; en modo servidor el contenido puede enviarse para clasificación en nuestro lado." },
       { title: "3. Fines", body: "Prestación del servicio (panel, alertas, informes), facturación, mejora de la clasificación y del producto, cumplimiento legal." },
       { title: "4. Base legal y conservación", body: "El tratamiento se basa en contrato, consentimiento cuando proceda e interés legítimo. Los metadatos se conservan lo necesario para el servicio; los datos de cuenta hasta eliminación o revocación del consentimiento, con sujeción a la ley." },
       { title: "5. Cesión de datos", body: "Los datos pueden compartirse con proveedores de nube y servicios solo en la medida necesaria. No vendemos datos personales." },

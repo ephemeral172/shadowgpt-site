@@ -12,7 +12,7 @@ const content = {
     sections: [
       {
         title: "Принцип: мы не храним содержимое ваших данных",
-        body: "ShadowGPT не сохраняет текст промптов, содержимое вложений (документы, код, изображения) и иные конфиденциальные данные пользователей. В облако передаются только метаданные событий (источник AI-сервиса, время, уровень риска, идентификатор устройства/пользователя в рамках организации) и результат классификации риска (HIGH / MEDIUM / LOW, тип контента по правилам). Извлечение признаков из текста и файлов выполняется локально в расширении; на сервер не отправляется сырой контент.",
+        body: "ShadowGPT не сохраняет текст промптов, содержимое вложений (документы, код, изображения) и иные конфиденциальные данные пользователей. В облако передаются только метаданные событий (источник AI-сервиса, время, уровень риска, идентификатор устройства/пользователя в рамках организации) и результат классификации риска (HIGH / MEDIUM / LOW, тип контента по правилам). Организация (администратор) сама решает, где выполнять классификацию: локально в расширении или на сервере. При локальном режиме сырой контент на сервер не отправляется; при серверном — обработка и при необходимости хранение выполняются на нашей стороне. Настраивается в дашборде.",
       },
       {
         title: "Где хранятся метаданные",
@@ -41,7 +41,7 @@ const content = {
     sections: [
       {
         title: "Principle: we do not store your data content",
-        body: "ShadowGPT does not store prompt text, attachment content (documents, code, images), or other confidential user data. Only event metadata (AI service source, time, risk level, device/user identifier within the organization) and risk classification results (HIGH / MEDIUM / LOW, content type by rules) are sent to the cloud. Feature extraction from text and files runs locally in the extension; raw content is not sent to the server.",
+        body: "ShadowGPT does not store prompt text, attachment content (documents, code, images), or other confidential user data. Only event metadata (AI service source, time, risk level, device/user identifier within the organization) and risk classification results (HIGH / MEDIUM / LOW, content type by rules) are sent to the cloud. The organization (admin) decides where classification runs: locally in the extension or on the server. In local mode, raw content is not sent to the server; in server mode, processing and storage may be performed on our side. Configurable in the dashboard.",
       },
       {
         title: "Where metadata is stored",
@@ -68,7 +68,7 @@ const content = {
     terms: "이용약관",
     privacy: "개인정보처리방침",
     sections: [
-      { title: "원칙: 데이터 내용을 저장하지 않음", body: "ShadowGPT는 프롬프트 텍스트, 첨부 파일 내용(문서, 코드, 이미지) 또는 기타 기밀 사용자 데이터를 저장하지 않습니다. 클라우드에는 이벤트 메타데이터(AI 서비스 출처, 시간, 위험 수준, 조직 내 기기/사용자 식별자)와 위험 분류 결과(HIGH/MEDIUM/LOW, 규칙별 콘텐츠 유형)만 전송됩니다. 텍스트 및 파일의 특징 추출은 확장 프로그램에서 로컬로 수행되며, 원본 콘텐츠는 서버로 전송되지 않습니다." },
+      { title: "원칙: 데이터 내용을 저장하지 않음", body: "ShadowGPT는 프롬프트 텍스트, 첨부 파일 내용(문서, 코드, 이미지) 또는 기타 기밀 사용자 데이터를 저장하지 않습니다. 클라우드에는 이벤트 메타데이터(AI 서비스 출처, 시간, 위험 수준, 조직 내 기기/사용자 식별자)와 위험 분류 결과(HIGH/MEDIUM/LOW, 규칙별 콘텐츠 유형)만 전송됩니다. 조직(관리자)이 분류 방식을 선택합니다: 확장 프로그램에서 로컬로 또는 서버에서. 로컬 모드에서는 원본 콘텐츠가 서버로 전송되지 않으며, 서버 모드에서는 당사 측에서 처리 및 저장이 이루어질 수 있습니다. 대시보드에서 설정합니다." },
       { title: "메타데이터 저장 위치", body: "이벤트 메타데이터와 계정 데이터는 대시보드 및 알림에 사용되는 클라우드 인프라에서 처리됩니다. 가용성 및 데이터 기밀 요건을 충족하는 제공자를 선택합니다. 제3자와의 데이터 공유 세부사항은 개인정보처리방침에 있습니다." },
       { title: "152-FZ(러시아 개인정보)", body: "개인정보 처리는 152-FZ에 맞춰 수행됩니다. 처리되는 개인정보 양을 최소화하며, 대화 및 파일 내용은 저장하지 않고 메타데이터와 분류만 저장합니다. Enterprise 플랜에는 152-FZ에 맞춘 AI 정책 생성기가 포함됩니다. 데이터 관리자: Axioma8. 권리 및 요청 방법은 개인정보처리방침에 있습니다." },
       { title: "GDPR 및 국제 규제", body: "EU 및 기타 관할권 사용자를 위해 GDPR 요건(데이터 최소화, 제한된 처리 목적, 접근·정정·삭제·처리 제한 권리)을 반영합니다. 프롬프트 및 파일 내용은 당사에서 처리하지 않습니다. Enterprise 정책 생성기는 GDPR 등 다른 관할권용 템플릿을 지원합니다. 법적 근거 및 보관 기간은 개인정보처리방침에 있습니다." },
@@ -82,7 +82,7 @@ const content = {
     terms: "Términos",
     privacy: "Política de privacidad",
     sections: [
-      { title: "Principio: no almacenamos el contenido de sus datos", body: "ShadowGPT no almacena texto de prompts, contenido de adjuntos (documentos, código, imágenes) ni otros datos confidenciales. Solo se envían a la nube metadatos de eventos (origen del servicio de IA, hora, nivel de riesgo, identificador de dispositivo/usuario) y resultados de clasificación (HIGH/MEDIUM/LOW, tipo de contenido). La extracción de características se hace localmente en la extensión; el contenido crudo no se envía al servidor." },
+      { title: "Principio: no almacenamos el contenido de sus datos", body: "ShadowGPT no almacena texto de prompts, contenido de adjuntos (documentos, código, imágenes) ni otros datos confidenciales. Solo se envían a la nube metadatos de eventos (origen del servicio de IA, hora, nivel de riesgo, identificador de dispositivo/usuario) y resultados de clasificación (HIGH/MEDIUM/LOW, tipo de contenido). La organización (el administrador) decide dónde se ejecuta la clasificación: localmente en la extensión o en el servidor. En modo local el contenido crudo no se envía al servidor; en modo servidor el procesamiento y el almacenamiento pueden realizarse en nuestro lado. Configurable en el panel." },
       { title: "Dónde se almacenan los metadatos", body: "Los metadatos de eventos y los datos de cuenta se procesan en la infraestructura en la nube del panel y las notificaciones. Elegimos proveedores que cumplen requisitos de disponibilidad y confidencialidad. Los detalles sobre cesión a terceros están en la Política de privacidad." },
       { title: "152-FZ (datos personales en Rusia)", body: "El tratamiento de datos personales se realiza conforme a 152-FZ. Minimizamos el volumen: no almacenamos el contenido de conversaciones ni archivos, solo metadatos y clasificación. El plan Enterprise incluye un generador de política de IA con plantillas alineadas con 152-FZ. Responsable: Axioma8. Derechos y solicitudes en la Política de privacidad." },
       { title: "GDPR y regulación internacional", body: "Para usuarios en la UE y otras jurisdicciones tenemos en cuenta el GDPR: minimización de datos, fines limitados, derechos de acceso, rectificación, supresión y limitación. El contenido de prompts y archivos no se procesa en nuestro lado. El generador de política en Enterprise soporta plantillas para GDPR y otras jurisdicciones. Bases legales y plazos en la Política de privacidad." },
