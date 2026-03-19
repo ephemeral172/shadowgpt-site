@@ -7,6 +7,13 @@ const content = {
     title: "Политика конфиденциальности",
     updated: "Обновлено: 2026",
     intro: "Мы не храним содержимое ваших данных. Ниже описано, какие данные мы обрабатываем и зачем.",
+    briefTitle: "Кратко",
+    briefList: [
+      "Собираются данные для идентификации пользователя (имя, отдел, ID в рамках продукта).",
+      "Собираются данные об использовании AI‑сервисов (какие сайты, когда).",
+      "Собирается содержимое запросов к AI (промпты) в целях мониторинга и классификации рисков.",
+      "Данные передаются только на инфраструктуру компании (ваш сервер/дашборд), не продаются и не передаются для рекламы или кредитования.",
+    ],
     sections: [
       {
         title: "1. Принцип минимальных данных",
@@ -44,6 +51,13 @@ const content = {
     title: "Privacy Policy",
     updated: "Last updated: 2026",
     intro: "We do not store your data content. Below we describe what data we process and why.",
+    briefTitle: "In brief",
+    briefList: [
+      "We collect data to identify users (name, department, in-product ID).",
+      "We collect data on use of AI services (which sites, when).",
+      "We collect the content of requests to AI (prompts) for monitoring and risk classification.",
+      "Data is only transferred to your company infrastructure (your server/dashboard); it is not sold or shared for advertising or credit.",
+    ],
     sections: [
       {
         title: "1. Minimal data principle",
@@ -81,6 +95,13 @@ const content = {
     title: "개인정보처리방침",
     updated: "최종 업데이트: 2026",
     intro: "당사는 귀하의 데이터 내용을 저장하지 않습니다. 아래에서 어떤 데이터를 처리하고 그 이유를 설명합니다.",
+    briefTitle: "요약",
+    briefList: [
+      "사용자 식별을 위한 데이터(이름, 부서, 제품 내 ID)를 수집합니다.",
+      "AI 서비스 이용 데이터(어떤 사이트, 언제)를 수집합니다.",
+      "모니터링 및 위험 분류를 위해 AI 요청(프롬프트) 내용을 수집합니다.",
+      "데이터는 회사 인프라(귀사 서버/대시보드)로만 전달되며, 광고나 신용 목적으로 판매·제공되지 않습니다.",
+    ],
     sections: [
       { title: "1. 최소 데이터 원칙", body: "ShadowGPT는 프롬프트 텍스트, 첨부 파일 내용(PDF, DOCX, 코드, 이미지) 또는 기타 기밀 사용자 데이터를 저장하지 않습니다. 클라우드에서는 대시보드, 보고서 및 알림에 필요한 이벤트 메타데이터(출처, 시간, 위험 수준, 사용자/기기 식별자)와 위험 분류 결과만 처리 및 저장합니다. 조직(관리자)이 분석 방식을 선택합니다: 확장 프로그램에서 로컬로 또는 서버에서; 서버 모드에서는 당사 측에서 처리 및 저장이 이루어질 수 있습니다." },
       { title: "2. 처리하는 데이터", body: "확장 프로그램 및 대시보드 사용 시 계정 데이터(이메일, 조직명), 모니터링 이벤트 메타데이터(서비스, 시간, 위험 수준, 분류별 콘텐츠 유형), 기술 데이터(IP, User-Agent, 확장 프로그램과 조직 연결 식별자)를 처리할 수 있습니다. 조직(관리자)이 모드를 선택합니다: 로컬 모드에서는 프롬프트 및 파일 내용이 서버로 전송되지 않으며, 서버 모드에서는 분류를 위해 당사로 전송될 수 있습니다." },
@@ -97,6 +118,13 @@ const content = {
     title: "Política de privacidad",
     updated: "Última actualización: 2026",
     intro: "No almacenamos el contenido de sus datos. A continuación describimos qué datos procesamos y por qué.",
+    briefTitle: "En resumen",
+    briefList: [
+      "Se recogen datos para identificar al usuario (nombre, departamento, ID en el producto).",
+      "Se recogen datos sobre el uso de servicios de IA (qué sitios, cuándo).",
+      "Se recoge el contenido de las solicitudes a la IA (prompts) para supervisión y clasificación de riesgos.",
+      "Los datos solo se transfieren a la infraestructura de la empresa (su servidor/panel); no se venden ni se ceden para publicidad o crédito.",
+    ],
     sections: [
       { title: "1. Principio de datos mínimos", body: "ShadowGPT no almacena texto de prompts, contenido de adjuntos (PDF, DOCX, código, imágenes) ni otros datos confidenciales de usuarios. Solo se procesan y almacenan en la nube metadatos de eventos (origen, hora, nivel de riesgo, identificador de usuario/dispositivo) y resultados de clasificación de riesgo, según lo necesario para el panel, informes y notificaciones. La organización (el administrador) decide dónde se ejecuta el análisis: localmente en la extensión o en el servidor; en modo servidor el procesamiento y el almacenamiento pueden realizarse en nuestro lado." },
       { title: "2. Datos que procesamos", body: "Al usar la extensión y el panel podemos procesar: datos de cuenta (email, nombre de organización); metadatos de eventos (servicio, hora, nivel de riesgo, tipo de contenido); datos técnicos (IP, User-Agent, identificadores). La organización (el administrador) elige el modo: en modo local el contenido de prompts y archivos no se envía al servidor; en modo servidor el contenido puede enviarse para clasificación en nuestro lado." },
@@ -129,7 +157,21 @@ export default function Privacy() {
 
         <h1 className="text-3xl font-light tracking-tight mb-2">{t.title}</h1>
         <p className="text-xs text-gray-500 dark:text-white/50 mb-10">{t.updated}</p>
-        <p className="text-gray-700 dark:text-white/75 font-light mb-12">{t.intro}</p>
+        <p className="text-gray-700 dark:text-white/75 font-light mb-8">{t.intro}</p>
+
+        {t.briefList && t.briefList.length > 0 && (
+          <div className="glass-card rounded-xl p-6 mb-12 border border-gray-200/80 dark:border-white/10">
+            <h2 className="text-base font-medium text-gray-800 dark:text-white/80 mb-4">{t.briefTitle}</h2>
+            <ul className="space-y-2 list-none">
+              {t.briefList.map((item, i) => (
+                <li key={i} className="text-sm text-gray-700 dark:text-white/75 font-light leading-relaxed flex gap-2">
+                  <span className="text-amber-600 dark:text-amber-400/90 mt-0.5 flex-shrink-0">•</span>
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
 
         <div className="space-y-8">
           {t.sections.map((section, i) => (
