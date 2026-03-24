@@ -257,7 +257,7 @@ export const t = {
       subtitle: "Protect your company from data leaks through AI services.",
       desc: "Browser extension + cloud dashboard. Setup in 10 minutes. No servers, agents, or complex deployment required.",
       localAi: "The extension uses a local AI model for analysis — your data never leaves your device, everything stays confidential.",
-      cta1: "Free 7-Day Audit",
+      cta1: "Free Audit",
       cta2: "Learn more ↓",
     },
     stats: {
@@ -456,7 +456,7 @@ export const t = {
     cta: {
       title1: "Discover what your employees",
       title2: "are sending to AI services",
-      desc: "Free 7-day audit. Setup in 10 minutes. No commitment.",
+      desc: "Free audit. Setup in 10 minutes. No commitment.",
       btn: "Start free audit",
     },
     resources: {
@@ -482,7 +482,7 @@ export const t = {
       subtitle: "AI 서비스를 통한 데이터 유출로부터 회사를 보호하세요.",
       desc: "브라우저 확장 프로그램 + 클라우드 대시보드. 10분 내 설치. 서버·에이전트·복잡한 배포 불필요.",
       localAi: "확장 프로그램에 로컬 AI 모델이 탑재되어 분석합니다. 데이터가 서버로 전송되지 않으며, 모든 내용이 기밀로 유지됩니다.",
-      cta1: "7일 무료 감사",
+      cta1: "무료 감사",
       cta2: "자세히 보기 ↓",
     },
     stats: {
@@ -570,7 +570,7 @@ export const t = {
     cta: {
       title1: "직원이 AI 서비스에",
       title2: "무엇을 보내는지 확인하세요",
-      desc: "7일 무료 감사. 10분 설치. 약정 없음.",
+      desc: "무료 감사. 10분 설치. 약정 없음.",
       btn: "무료 감사 시작",
     },
     resources: {
@@ -596,7 +596,7 @@ export const t = {
       subtitle: "Proteja su empresa de fugas de datos a través de servicios de IA.",
       desc: "Extensión de navegador + panel en la nube. Configuración en 10 minutos. Sin servidores, agentes ni despliegue complejo.",
       localAi: "La extensión utiliza un modelo de IA local para el análisis: sus datos no salen del dispositivo, todo es confidencial.",
-      cta1: "Auditoría gratuita de 7 días",
+      cta1: "Auditoría gratuita",
       cta2: "Saber más ↓",
     },
     stats: {
@@ -684,7 +684,7 @@ export const t = {
     cta: {
       title1: "Descubra qué envían sus empleados",
       title2: "a los servicios de IA",
-      desc: "Auditoría gratuita de 7 días. Instalación en 10 minutos. Sin compromiso.",
+      desc: "Auditoría gratuita. Instalación en 10 minutos. Sin compromiso.",
       btn: "Iniciar auditoría gratuita",
     },
     resources: {
