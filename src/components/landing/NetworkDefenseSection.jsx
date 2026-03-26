@@ -16,7 +16,7 @@ function MeshDiagram({ labels }) {
 
   return (
     <div
-      className="relative w-full max-w-[34rem] mx-auto aspect-[14/11.5] min-h-[280px] select-none"
+      className="relative mx-auto aspect-[14/11.5] w-full max-w-full min-h-[220px] sm:min-h-[260px] md:min-h-[290px] lg:min-h-[320px] xl:min-h-[360px] 2xl:min-h-[400px] select-none"
       aria-hidden
     >
       <svg
@@ -237,9 +237,9 @@ export default function NetworkDefenseSection() {
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true, margin: "-60px" }}
           transition={{ duration: 0.7, delay: 0.05 }}
-          className="max-w-xl mx-auto"
+          className="mx-auto w-full max-w-lg sm:max-w-xl md:max-w-2xl lg:max-w-4xl xl:max-w-5xl 2xl:max-w-6xl"
         >
-          <div className="glass-card rounded-2xl p-6 md:p-8 pb-12">
+          <div className="glass-card rounded-xl p-4 pb-11 sm:rounded-2xl sm:p-6 sm:pb-12 md:p-8 lg:p-10 xl:p-12 lg:pb-14 xl:pb-16">
             <MeshDiagram labels={tx.diagram} />
           </div>
         </motion.div>
