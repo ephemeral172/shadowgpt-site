@@ -166,7 +166,7 @@ export const t = {
       title1: "Сеть,",
       title2: "которая учится с вами",
       intro:
-        "Три контура: обмен обезличенными сигналами между компаниями только при явном согласии; сырые примеры для правил — только у вас внутри; одобренные правила можно распространять по платформе.",
+        "Три вещи разведены по смыслу. Между компаниями передаются только обезличенные сигналы — и только если вы сами на это согласились. Сырые примеры, из которых собираются правила, остаются в вашей организации и сами по себе никуда не уходят. Проверенные правила распространяются ко всем клиентам платформы.",
       diagram: {
         hub: "Коллективная сеть",
         hubSub: "обезличенные индикаторы",
@@ -419,7 +419,7 @@ export const t = {
       title1: "A mesh",
       title2: "that learns with you",
       intro:
-        "Three layers: anonymized signals shared across tenants with explicit opt-in, local raw samples to propose rules inside your boundary, and approved rules published across the platform.",
+        "Three ideas, kept separate. Companies exchange only anonymized signals—and only when you choose to participate. Raw examples that rules are built from stay inside your organization. Verified rules are distributed to every customer on the platform.",
       diagram: {
         hub: "Collective mesh",
         hubSub: "anonymized only",
@@ -592,7 +592,7 @@ export const t = {
       title1: "함께 배우는",
       title2: "메시 네트워크",
       intro:
-        "세 가지 축: opt-in 시에만 공유되는 익명화 지표, 테넌트 경계 안에 남는 로컬 원시 샘플로 규칙 후보 생성, 플랫폼 전체에 배포되는 승인 규칙.",
+        "세 가지는 서로 분리되어 있습니다. 기업 간에는 익명화된 신호만 오가며, 참여는 명시적으로 동의한 경우에만 가능합니다. 규칙의 기반이 되는 원시 예시는 귀사 경계 안에만 머무릅니다. 검증된 규칙은 플랫폼의 모든 고객에게 배포됩니다.",
       diagram: {
         hub: "집단 메시",
         hubSub: "익명 지표만",
@@ -724,7 +724,7 @@ export const t = {
       title1: "Una malla",
       title2: "que aprende contigo",
       intro:
-        "Tres capas: señales anonimizadas entre empresas solo con opt-in, muestras crudas locales para proponer reglas dentro de su perímetro, y reglas aprobadas en toda la plataforma.",
+        "Tres cosas, bien separadas. Entre empresas solo circulan señales anonimizadas, y solo si usted decide participar. Los ejemplos en bruto a partir de los cuales se proponen reglas permanecen dentro de su organización. Las reglas verificadas se distribuyen a todos los clientes de la plataforma.",
       diagram: {
         hub: "Malla colectiva",
         hubSub: "solo anonimizado",
