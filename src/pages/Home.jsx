@@ -5,6 +5,7 @@ import HeroSection from "../components/landing/HeroSection";
 import StatsSection from "../components/landing/StatsSection";
 import HowItWorksSection from "../components/landing/HowItWorksSection";
 import FeaturesSection from "../components/landing/FeaturesSection";
+import NetworkDefenseSection from "../components/landing/NetworkDefenseSection";
 import ComparisonSection from "../components/landing/ComparisonSection";
 import AudienceSection from "../components/landing/AudienceSection";
 import ComplianceSection from "../components/landing/ComplianceSection";
@@ -36,6 +37,8 @@ export default function Home() {
         <HowItWorksSection />
         <Divider />
         <FeaturesSection />
+        <Divider />
+        <NetworkDefenseSection />
         <Divider />
         <ComparisonSection />
         <Divider />

@@ -216,6 +216,196 @@
   color: rgba(255, 255, 255, 0.9);
 }
 
+/* Network defense mesh diagram */
+.mesh-diagram-svg .mesh-link-dash {
+  stroke-dasharray: 6 8;
+  animation: mesh-dash-flow 9s linear infinite;
+}
+.mesh-diagram-svg .mesh-link-dash-delay {
+  stroke-dasharray: 6 8;
+  animation: mesh-dash-flow 9s linear infinite;
+  animation-delay: -4.5s;
+}
+.mesh-diagram-svg .mesh-link-bridge {
+  stroke-dasharray: 4 10;
+  animation: mesh-dash-flow 16s linear infinite reverse;
+  animation-delay: -2s;
+}
+.mesh-diagram-svg .mesh-link-soft {
+  stroke-dasharray: 2 8;
+  opacity: 0.55;
+  animation: mesh-dash-flow 22s linear infinite reverse, mesh-link-breathe 5s ease-in-out infinite;
+}
+.mesh-diagram-svg .mesh-link-soft-delay {
+  animation-delay: -3.5s, -1s;
+}
+.mesh-diagram-svg .mesh-link-emerald {
+  stroke-dasharray: 5 7;
+  animation: mesh-dash-flow 11s linear infinite, mesh-emerald-pulse 3.5s ease-in-out infinite;
+}
+.mesh-diagram-svg .mesh-link-amber-flow {
+  stroke-dasharray: 3 9;
+  animation: mesh-dash-flow 13s linear infinite, mesh-link-breathe 4.5s ease-in-out infinite;
+  animation-delay: -2.5s, -0.5s;
+}
+@keyframes mesh-dash-flow {
+  to {
+    stroke-dashoffset: -56;
+  }
+}
+@keyframes mesh-link-breathe {
+  0%,
+  100% {
+    opacity: 0.38;
+  }
+  50% {
+    opacity: 0.72;
+  }
+}
+@keyframes mesh-emerald-pulse {
+  0%,
+  100% {
+    opacity: 0.55;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+.mesh-diagram-svg .mesh-node-pulse {
+  animation: mesh-node-ring 3.8s ease-in-out infinite;
+}
+.mesh-diagram-svg .mesh-node-pulse-slow {
+  animation: mesh-node-ring 6s ease-in-out infinite;
+  animation-delay: 0.4s;
+}
+.mesh-diagram-svg .mesh-node-pulse-wide {
+  animation: mesh-node-ring-wide 8s ease-in-out infinite;
+  animation-delay: 0.2s;
+}
+@keyframes mesh-node-ring {
+  0%,
+  100% {
+    opacity: 0.22;
+  }
+  50% {
+    opacity: 0.88;
+  }
+}
+@keyframes mesh-node-ring-wide {
+  0%,
+  100% {
+    opacity: 0.06;
+  }
+  50% {
+    opacity: 0.42;
+  }
+}
+.mesh-diagram-svg .mesh-node-org {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: mesh-node-bob 5.5s ease-in-out infinite;
+}
+.mesh-diagram-svg .mesh-node-org-delay {
+  animation-delay: -2.75s;
+}
+.mesh-diagram-svg .mesh-node-local {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: mesh-local-breathe 4s ease-in-out infinite;
+}
+.mesh-diagram-svg .mesh-node-global {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: mesh-global-pulse 4.2s ease-in-out infinite;
+  animation-delay: -1s;
+}
+@keyframes mesh-node-bob {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-4px);
+  }
+}
+@keyframes mesh-local-breathe {
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.06);
+    opacity: 0.92;
+  }
+}
+@keyframes mesh-global-pulse {
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.05);
+    opacity: 0.88;
+  }
+}
+.mesh-diagram-svg .mesh-orbit-dot {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: mesh-orbit-twinkle 2.8s ease-in-out infinite;
+}
+@keyframes mesh-orbit-twinkle {
+  0%,
+  100% {
+    opacity: 0.15;
+    transform: scale(0.75);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.15);
+  }
+}
+/* Подписи mesh: читаемость на тёплом градиенте в dark */
+.dark .mesh-diagram-label-title {
+  color: rgb(255 251 235);
+  text-shadow:
+    0 0 12px rgba(0, 0, 0, 0.9),
+    0 1px 3px rgba(0, 0, 0, 0.95),
+    0 0 1px rgba(0, 0, 0, 1);
+}
+.dark .mesh-diagram-label-sub {
+  color: rgb(254 243 199);
+  text-shadow:
+    0 0 10px rgba(0, 0, 0, 0.85),
+    0 1px 2px rgba(0, 0, 0, 0.9);
+}
+
+.mesh-diagram-svg .mesh-bg-ellipse {
+  animation: mesh-bg-breathe 10s ease-in-out infinite;
+}
+.mesh-diagram-svg .mesh-hub-fill {
+  animation: mesh-hub-shimmer 7s ease-in-out infinite;
+}
+@keyframes mesh-hub-shimmer {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.9;
+  }
+}
+@keyframes mesh-bg-breathe {
+  0%,
+  100% {
+    opacity: 0.85;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
 /* Liquid orb animations */
 @keyframes float {
   0%, 100% { transform: translateY(0) scale(1); }

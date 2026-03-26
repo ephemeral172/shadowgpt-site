@@ -161,6 +161,24 @@ export const t = {
       badges: ["152-ФЗ", "GDPR", "EU AI Act"],
       linkText: "Подробнее",
     },
+    networkDefense: {
+      label: "Коллективная защита",
+      title1: "Сеть,",
+      title2: "которая учится с вами",
+      intro:
+        "Три контура: обмен обезличенными сигналами между компаниями только при явном согласии; сырые примеры для правил — только у вас внутри; одобренные правила можно распространять по платформе.",
+      diagram: {
+        hub: "Коллективная сеть",
+        hubSub: "обезличенные индикаторы",
+        org: "Компании",
+        local: "Локально",
+        localSub: "raw",
+        global: "Сетевые правила",
+        globalSub: "общие шаблоны",
+        tagOptIn: "opt-in",
+        tagRaw: "raw",
+      },
+    },
     pricing: {
       label: "Тарифы",
       title1: "Простое",
@@ -396,6 +414,24 @@ export const t = {
       badges: ["GDPR", "EU AI Act"],
       linkText: "Learn more",
     },
+    networkDefense: {
+      label: "Collective defense",
+      title1: "A mesh",
+      title2: "that learns with you",
+      intro:
+        "Three layers: anonymized signals shared across tenants with explicit opt-in, local raw samples to propose rules inside your boundary, and approved rules published across the platform.",
+      diagram: {
+        hub: "Collective mesh",
+        hubSub: "anonymized only",
+        org: "Tenants",
+        local: "Local training",
+        localSub: "raw",
+        global: "Global rules",
+        globalSub: "shared templates",
+        tagOptIn: "opt-in",
+        tagRaw: "raw",
+      },
+    },
     pricing: {
       label: "Pricing",
       title1: "Simple",
@@ -551,6 +587,24 @@ export const t = {
       badges: ["GDPR", "EU AI Act"],
       linkText: "자세히 보기",
     },
+    networkDefense: {
+      label: "집단 방어",
+      title1: "함께 배우는",
+      title2: "메시 네트워크",
+      intro:
+        "세 가지 축: opt-in 시에만 공유되는 익명화 지표, 테넌트 경계 안에 남는 로컬 원시 샘플로 규칙 후보 생성, 플랫폼 전체에 배포되는 승인 규칙.",
+      diagram: {
+        hub: "집단 메시",
+        hubSub: "익명 지표만",
+        org: "테넌트",
+        local: "로컬 학습",
+        localSub: "raw",
+        global: "글로벌 규칙",
+        globalSub: "공유 템플릿",
+        tagOptIn: "opt-in",
+        tagRaw: "raw",
+      },
+    },
     pricing: {
       label: "요금",
       title1: "간단한",
@@ -664,6 +718,24 @@ export const t = {
       onPrem: "Podemos desplegar una solución on-premise bajo petición.",
       badges: ["GDPR", "EU AI Act"],
       linkText: "Saber más",
+    },
+    networkDefense: {
+      label: "Defensa colectiva",
+      title1: "Una malla",
+      title2: "que aprende contigo",
+      intro:
+        "Tres capas: señales anonimizadas entre empresas solo con opt-in, muestras crudas locales para proponer reglas dentro de su perímetro, y reglas aprobadas en toda la plataforma.",
+      diagram: {
+        hub: "Malla colectiva",
+        hubSub: "solo anonimizado",
+        org: "Empresas",
+        local: "Local",
+        localSub: "raw",
+        global: "Reglas globales",
+        globalSub: "plantillas compartidas",
+        tagOptIn: "opt-in",
+        tagRaw: "raw",
+      },
     },
     pricing: {
       label: "Precios",
