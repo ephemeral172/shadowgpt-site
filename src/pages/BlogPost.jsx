@@ -3,45 +3,7 @@ import { Link, useParams, useNavigate } from "react-router-dom";
 import { Shield, Calendar } from "lucide-react";
 import { useLang } from "../components/landing/LangContext";
 import { getPostBySlug } from "../data/blogPosts";
-
-const BASE_URL = "https://shadowgpt.app";
-
-const DEFAULT_META = {
-  canonical: BASE_URL + "/",
-  ogType: "website",
-  ogUrl: BASE_URL + "/",
-  ogTitle: "ShadowGPT — Corporate protection from AI data leaks",
-  ogDescription: "Monitor and control what employees send to ChatGPT, Claude, Gemini. Browser extension + cloud dashboard. No prompt content stored. Free 7-day audit.",
-  ogImage: BASE_URL + "/og-image.png",
-  ogImageWidth: "1200",
-  ogImageHeight: "630",
-  twitterCard: "summary_large_image",
-  twitterUrl: BASE_URL + "/",
-  twitterTitle: "ShadowGPT — Corporate protection from AI data leaks",
-  twitterDescription: "Monitor and control what employees send to ChatGPT, Claude, Gemini. Browser extension + cloud dashboard. Free 7-day audit.",
-  twitterImage: BASE_URL + "/og-image.png",
-};
-
-function setMeta(attr, content, useProperty = false) {
-  const key = useProperty ? "property" : "name";
-  let el = document.querySelector(`meta[${key}="${attr}"]`);
-  if (!el) {
-    el = document.createElement("meta");
-    el.setAttribute(key, attr);
-    document.head.appendChild(el);
-  }
-  el.setAttribute("content", content);
-}
-
-function setCanonical(href) {
-  let el = document.querySelector('link[rel="canonical"]');
-  if (!el) {
-    el = document.createElement("link");
-    el.setAttribute("rel", "canonical");
-    document.head.appendChild(el);
-  }
-  el.setAttribute("href", href);
-}
+import { BASE_URL, setCanonical, setMeta, restoreDefaultSiteMeta, setRobots } from "../lib/seo/documentMeta";
 
 function applyPostMeta(post, c) {
   const postUrl = `${BASE_URL}/Blog/${post.slug}`;
@@ -60,22 +22,6 @@ function applyPostMeta(post, c) {
   setMeta("twitter:title", c.title);
   setMeta("twitter:description", c.description);
   setMeta("twitter:image", imageUrl);
-}
-
-function restoreDefaultMeta() {
-  setCanonical(DEFAULT_META.canonical);
-  setMeta("og:type", DEFAULT_META.ogType, true);
-  setMeta("og:url", DEFAULT_META.ogUrl, true);
-  setMeta("og:title", DEFAULT_META.ogTitle, true);
-  setMeta("og:description", DEFAULT_META.ogDescription, true);
-  setMeta("og:image", DEFAULT_META.ogImage, true);
-  setMeta("og:image:width", DEFAULT_META.ogImageWidth, true);
-  setMeta("og:image:height", DEFAULT_META.ogImageHeight, true);
-  setMeta("twitter:card", DEFAULT_META.twitterCard);
-  setMeta("twitter:url", DEFAULT_META.twitterUrl);
-  setMeta("twitter:title", DEFAULT_META.twitterTitle);
-  setMeta("twitter:description", DEFAULT_META.twitterDescription);
-  setMeta("twitter:image", DEFAULT_META.twitterImage);
 }
 
 const LANG = { en: "en", ru: "ru", ko: "ko", es: "es" };
@@ -145,8 +91,9 @@ export default function BlogPost() {
       kw.setAttribute("content", c.keywords);
     } else if (kw) kw.remove();
 
+    setRobots("index, follow");
     applyPostMeta(post, c);
-    return () => restoreDefaultMeta();
+    return () => restoreDefaultSiteMeta();
   }, [post, l, navigate]);
 
   if (!post) {

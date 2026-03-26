@@ -7,6 +7,7 @@ import PageNotFound from './lib/PageNotFound';
 import { AuthProvider, useAuth } from '@/lib/AuthContext';
 import UserNotRegisteredError from '@/components/UserNotRegisteredError';
 import GoogleAnalytics from '@/components/GoogleAnalytics';
+import SeoForRoute from '@/components/SeoForRoute';
 import BlogPost from './pages/BlogPost';
 
 const { Pages, Layout, mainPage } = pagesConfig;
@@ -76,6 +77,7 @@ function App() {
     <AuthProvider>
       <QueryClientProvider client={queryClientInstance}>
         <Router>
+          <SeoForRoute />
           <GoogleAnalytics />
           <AuthenticatedApp />
         </Router>
