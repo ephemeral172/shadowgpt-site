@@ -6,7 +6,6 @@ import StatsSection from "../components/landing/StatsSection";
 import HowItWorksSection from "../components/landing/HowItWorksSection";
 import FeaturesSection from "../components/landing/FeaturesSection";
 import NetworkDefenseSection from "../components/landing/NetworkDefenseSection";
-import ComparisonSection from "../components/landing/ComparisonSection";
 import AudienceSection from "../components/landing/AudienceSection";
 import ComplianceSection from "../components/landing/ComplianceSection";
 import CTASection from "../components/landing/CTASection";
@@ -39,8 +38,6 @@ export default function Home() {
         <FeaturesSection />
         <Divider />
         <NetworkDefenseSection />
-        <Divider />
-        <ComparisonSection />
         <Divider />
         <AudienceSection />
         <Divider />
